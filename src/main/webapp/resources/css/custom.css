@@ -38,6 +38,9 @@
 .col-sm-7>.wrap>.row,.col-sm-5>.wrap>.row,.col-md-7>.wrap>.row,.col-md-5>.wrap>.row{
     border:1px solid;
 }
+.col-md-7>.wrap>.popup>.row,.col-md-5>.wrap>.popup>.row{
+    border:1px dashed;
+}
 .rounded-top{
     border-top-right-radius:5px;
     border-top-left-radius: 5px;
@@ -74,6 +77,9 @@ form a.right,form button{
 input[type="file"]{
     padding:0px 0px;
     border:none;
+}
+.popup textarea{
+    margin-bottom:10px;
 }
 .black{
     color:black;
@@ -140,4 +146,7 @@ form{
 }
 .fa-2x,.fa-stack{
     color:black;
+}
+.display{
+    display:none;
 }
