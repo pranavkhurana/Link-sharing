@@ -23,20 +23,15 @@ public class LoginController {
         this.userService = userService;
     }
 
+
     @RequestMapping("/")
-    @ResponseBody
-    public String test(){
-
-    }
-
-    /*@RequestMapping("/")
     public ModelAndView home(){
 
         ModelAndView model=new ModelAndView("index");
         model.addObject("user",new User());
         model.addObject("user2",new User());
         return model;
-    }*/
+    }
 
     @RequestMapping(value="/login",method=RequestMethod.POST)
     ModelAndView login(@Valid User user,BindingResult bindingResult, HttpServletRequest request){
@@ -47,7 +42,7 @@ public class LoginController {
 
         User userFetched=userService.check(user);
         if(userFetched!=null){
-            request.getSession().setAttribute("username",userFetched.getFirstname());
+            request.getSession().setAttribute("user",userFetched);
 //            ModelAndView m=new ModelAndView("redirect:/dashboard");
             ModelAndView m=new ModelAndView("home");
             m.addObject("user",userFetched);
