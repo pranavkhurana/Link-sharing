@@ -77,6 +77,10 @@
             margin-right: 15px;
             margin-bottom:10px !important;
         }
+        input[type="file"]{
+            padding:0px 0px;
+            border:none;
+        }
         .black{
             color:black;
         }
@@ -204,11 +208,12 @@
                     <h5>Login</h5>
                 </div>
                 <div class="row">
-
-                    <%--<form action="login" method="post" class="form-horizotal">--%>
+                    <div style="text-align: center;margin-bottom: 10px;color:red">${loginMessage}
                         <form:errors path="user.password"/>
                         <form:errors path="user.email"/>
+                    </div>
                         <form:form action="login" method="post" class="form-horizontal login-form" commandName="user">
+
                         <div class="form-group">
                             <label class="control-label col-sm-5" for="email">Email/Username*</label>
                             <div class="col-sm-7">
@@ -223,8 +228,7 @@
                         </div>
                         <button type="submit" class="btn btn-default">Login</button>
                         <a id="forgot-password" class="right" href="#">Forgot password</a>
-                    <%--</form>--%>
-                        </form:form>
+                    </form:form>
                 </div>
 
                 <hr>
@@ -233,7 +237,14 @@
                     <h5>Register</h5>
                 </div>
                 <div class="row">
-                    <form:form action="register" method="post" commandName="user" class="form-horizotal">
+                        <div style="text-align: center;margin-bottom: 10px;color:red">
+                            <form:errors path="user2.password"/>
+                            <form:errors path="user2.email"/>
+                            <form:errors path="user2.photo"/>
+                        </div>
+                        <form:form action="register" method="post" commandName="user2" class="form-horizotal" enctype="multipart/form-data">
+
+                        <div style="text-align: center;margin-bottom: 10px">${registerMessage}</div>
                         <div class="form-group">
                             <label class="control-label col-sm-5" for="first">First name*</label>
                             <div class="col-sm-7">
@@ -273,7 +284,7 @@
                         <div class="form-group">
                             <label class="control-label col-sm-5" for="confirm">Confirm password*</label>
                             <div class="col-sm-7">
-                                <input type="password" class="form-control" id="confirm" name="confirm" required/>
+                                <input type="password" class="form-control" id="confirm" name="confirmPassword" required/>
                             </div>
                         </div>
                         <div class="clearfix">
@@ -282,7 +293,7 @@
                         <div class="form-group">
                             <label class="control-label col-md-5" for="photo">Photo</label>
                             <div class="col-md-7 col-sm-12">
-                                <input type="file" class="form-control" id="photo" name="photo"/>
+                                <input type="file" class="form-control" id="photo" name="file"/>
                             </div>
                         </div>
                         <button type="submit" class="btn btn-default">Register</button>

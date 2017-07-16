@@ -1,6 +1,5 @@
 package com.ttnd.entity;
 
-import javax.annotation.Generated;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
@@ -14,11 +13,11 @@ public class User {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     int userid;
 
-    @NotEmpty(message ="default messge")
-    @Email(message="Invali email")
+    @NotEmpty(message ="default message")
+    @Email(message="Invalid email")
     String email;
 
-    @NotEmpty
+    @NotEmpty(message="invalid pass")
     @Size(min=8,max=30,message="Password must be between 8 and 30 characters")
     String password;
 
@@ -28,6 +27,8 @@ public class User {
     @NotEmpty
     String lastname;
 
+    @NotEmpty(message="photo required")
+    @Column(length=100000)
     byte[] photo;
 
     boolean admin;
@@ -39,6 +40,28 @@ public class User {
 
     @Temporal(TemporalType.DATE)
     Date lastUpdated;
+
+    @NotEmpty
+    String username;
+
+    @Transient
+    String confirmPassword;
+
+    public String getConfirmPassword() {
+        return confirmPassword;
+    }
+
+    public void setConfirmPassword(String confirmPassword) {
+        this.confirmPassword = confirmPassword;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
     public String getFirstname() {
         return firstname;

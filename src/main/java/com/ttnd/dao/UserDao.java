@@ -50,4 +50,38 @@ public class UserDao {
             return (User)list.get(0);
         return null;
     }
+
+    public boolean addUser(User user){
+        Session session=sessionFactory.openSession();
+        session.beginTransaction();
+        session.save(user);
+        session.getTransaction().commit();
+        return true;
+    }
+
+    public int checkUsernameAndEmailUniqueness(User user){
+
+        Session session=sessionFactory.openSession();
+        session.beginTransaction();
+
+        Query query=session.createQuery("from User where email=?");
+        query.setParameter(0,user.getEmail());
+        query.setMaxResults(1);
+        List list=query.list();
+
+        Query query1=session.createQuery("from User where username=?");
+        query1.setParameter(0,user.getUsername());
+        query1.setMaxResults(1);
+        List list1=query1.list();
+
+        session.getTransaction().commit();
+        if(list.size()>0 && list1.size()>0)
+            return 1;
+        else if(list.size()>0 || list1.size()>0){
+            if(list.size()>0)
+                return 2;
+            return 3;
+        }
+        return 0;
+    }
 }
