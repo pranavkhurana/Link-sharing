@@ -25,5 +25,6 @@ public class ResourceDao {
         session.beginTransaction();
         session.save(resource);
         session.getTransaction().commit();
+        return true;
     }
 }

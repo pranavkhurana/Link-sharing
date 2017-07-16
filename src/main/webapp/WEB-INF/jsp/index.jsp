@@ -14,6 +14,7 @@
         .container-fluid{
             border:1px solid;
             border-radius:10px;
+            margin-bottom:20px;
         }
         .header h2{
             display:inline-block;
@@ -38,10 +39,16 @@
             margin-right:10px;
             margin-top:8px;
         }
+        /*changes*/
+        .header>a{
+            float:right;
+            margin: 25px 3px 0px 3px;
+        }
         .wrap{
             margin:10px;
         }
-        .col-sm-7 .row,.col-sm-5 .row{
+        /*changes*/
+        .col-sm-7>.wrap>.row,.col-sm-5>.wrap>.row,.col-md-7>.wrap>.row,.col-md-5>.wrap>.row{
             border:1px solid;
         }
         .rounded-top{
@@ -109,6 +116,44 @@
             color:#4b4a4a4d;
         }
 
+        /*dashboard specific*/
+        .panel-heading-right-text{
+            padding:7px;
+            float:right;
+        }
+        .row.rounded-top h5{
+            display:inline-block;
+        }
+        .rounded-all{
+            border-radius:8px;
+            margin-bottom:30px;
+        }
+        .small-underline{
+            margin-left:8px;
+            text-decoration: underline;
+        }
+        .margin-top-15{
+            margin-top: 30px;
+        }
+        .margin-top-16{
+            margin-top:16px;
+        }
+        .after-media a{
+            float:right;
+            padding:4px;
+        }
+        .after-media{
+            margin: 8px 5px 5px 15px;
+        }
+        .media-body form input[type="text"]{
+            width:35%;
+        }
+        .media-body form input[type="submit"]{
+            padding:0px;
+        }
+        .fa-2x,.fa-stack{
+            color:black;
+        }
 
     </style>
 </head>

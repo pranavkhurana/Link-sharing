@@ -19,10 +19,11 @@ public class AddResourceController {
 
     @RequestMapping("/add-resource")
     public boolean addResource(){
-        LinkResource resource=new LinkResource();
-        resource.setUrl("facebook.com");
-        resource.setTopic();
-        resource.setCreatedBy();
-        resourceService.addResource();
+//        LinkResource resource=new LinkResource();
+//        resource.setUrl("facebook.com");
+//        resource.setTopic();
+//        resource.setCreatedBy();
+//        resourceService.addResource();
+        return true;
     }
 }

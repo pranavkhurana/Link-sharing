@@ -44,7 +44,7 @@ public class LoginController {
         if(userFetched!=null){
             request.getSession().setAttribute("user",userFetched);
 //            ModelAndView m=new ModelAndView("redirect:/dashboard");
-            ModelAndView m=new ModelAndView("home");
+            ModelAndView m=new ModelAndView("dashboard");
             m.addObject("user",userFetched);
             return m;
         }
