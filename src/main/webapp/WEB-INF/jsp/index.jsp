@@ -1,4 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -87,6 +89,9 @@
         }
         form{
             padding:10px;
+        }
+        .login-form .form-group{
+            margin-bottom:15px;
         }
         .dropdown{
             float:right;
@@ -200,7 +205,10 @@
                 </div>
                 <div class="row">
 
-                    <form action="login" method="post" class="form-horizotal">
+                    <%--<form action="login" method="post" class="form-horizotal">--%>
+                        <form:errors path="user.password"/>
+                        <form:errors path="user.email"/>
+                        <form:form action="login" method="post" class="form-horizontal login-form" commandName="user">
                         <div class="form-group">
                             <label class="control-label col-sm-5" for="email">Email/Username*</label>
                             <div class="col-sm-7">
@@ -215,7 +223,8 @@
                         </div>
                         <button type="submit" class="btn btn-default">Login</button>
                         <a id="forgot-password" class="right" href="#">Forgot password</a>
-                    </form>
+                    <%--</form>--%>
+                        </form:form>
                 </div>
 
                 <hr>
@@ -224,7 +233,7 @@
                     <h5>Register</h5>
                 </div>
                 <div class="row">
-                    <form class="form-horizotal">
+                    <form:form action="register" method="post" commandName="user" class="form-horizotal">
                         <div class="form-group">
                             <label class="control-label col-sm-5" for="first">First name*</label>
                             <div class="col-sm-7">
@@ -277,7 +286,7 @@
                             </div>
                         </div>
                         <button type="submit" class="btn btn-default">Register</button>
-                    </form>
+                    </form:form>
                 </div>
             </div><!--wrap-->
         </div> <!--col-sm-4-->

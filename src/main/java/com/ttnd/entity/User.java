@@ -2,20 +2,30 @@ package com.ttnd.entity;
 
 import javax.annotation.Generated;
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 import java.util.Date;
 
 @Entity
 public class User {
+
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     int userid;
 
+    @NotEmpty(message ="default messge")
+    @Email(message="Invali email")
     String email;
 
+    @NotEmpty
+    @Size(min=8,max=30,message="Password must be between 8 and 30 characters")
     String password;
 
+    @NotEmpty
     String firstname;
 
+    @NotEmpty
     String lastname;
 
     byte[] photo;
