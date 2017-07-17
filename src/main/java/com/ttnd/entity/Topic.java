@@ -23,7 +23,7 @@ public class Topic {
 
     Visibility visibility;
 
-    enum Visibility{Public,Private};
+    public enum Visibility{Public,Private};
 
     public Visibility getVisibility() {
         return visibility;

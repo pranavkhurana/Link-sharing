@@ -1,9 +1,12 @@
 package com.ttnd.controller;
 
+import com.ttnd.entity.Topic;
 import com.ttnd.entity.User;
 import com.ttnd.service.UserRegisterService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
@@ -12,6 +15,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.io.PrintWriter;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
 
 @Controller
 public class LoginController {
@@ -26,29 +32,23 @@ public class LoginController {
 
     @RequestMapping("/")
     public ModelAndView home(){
-
-        ModelAndView model=new ModelAndView("index");
-        model.addObject("user",new User());
-        model.addObject("user2",new User());
-        return model;
+        ModelAndView model1=new ModelAndView("index");
+        model1.addObject("user",new User());
+        model1.addObject("user2",new User());
+        return model1;
     }
 
     @RequestMapping(value="/login",method=RequestMethod.POST)
-    ModelAndView login(@Valid User user,BindingResult bindingResult, HttpServletRequest request){
+    ModelAndView login(User user,HttpServletRequest request){
 
-        if(bindingResult.hasErrors()){
-            return new ModelAndView("index");
-        }
-
+        //to use binding result here make separate LoginCommand Dto
         User userFetched=userService.check(user);
         if(userFetched!=null){
             request.getSession().setAttribute("user",userFetched);
-//            ModelAndView m=new ModelAndView("redirect:/dashboard");
-            ModelAndView m=new ModelAndView("dashboard");
-            m.addObject("user",userFetched);
+            ModelAndView m=new ModelAndView("forward:/dashboard");
             return m;
         }
-        return new ModelAndView("index","loginMessage","Invalid Email or Password. Please try again.");
+        return new ModelAndView("forward:/","loginMessage","Invalid Email or Password. Please try again.");
     }
 
     @RequestMapping(value="/register",method = RequestMethod.POST)

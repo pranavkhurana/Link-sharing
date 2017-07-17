@@ -1,9 +1,13 @@
 package com.ttnd.entity;
 
+import org.hibernate.validator.constraints.*;
+
 import javax.persistence.*;
+import javax.validation.constraints.*;
 import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
+import java.util.Arrays;
 import java.util.Date;
 
 @Entity
@@ -13,21 +17,21 @@ public class User {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     int userid;
 
-    @NotEmpty(message ="default message")
-    @Email(message="Invalid email")
+    @org.hibernate.validator.constraints.NotEmpty(message ="Email can't be empty")
+    @org.hibernate.validator.constraints.Email(message="Invalid email")
+    @Size(min=8,max=30,message="Email must be between 8 and 30 characters")
     String email;
 
-    @NotEmpty(message="invalid pass")
-    @Size(min=8,max=30,message="Password must be between 8 and 30 characters")
+    @org.hibernate.validator.constraints.NotEmpty(message="Password is required")
+    @Size(min=8,max=30,message="Password must be between 8 and 30 characters. THis message is from validation")
     String password;
 
-    @NotEmpty
+    @org.hibernate.validator.constraints.NotEmpty
     String firstname;
 
-    @NotEmpty
+    @org.hibernate.validator.constraints.NotEmpty
     String lastname;
 
-    @NotEmpty(message="photo required")
     @Column(length=100000)
     byte[] photo;
 
@@ -141,5 +145,23 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userid=" + userid +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", photo=" + Arrays.toString(photo) +
+                ", admin=" + admin +
+                ", active=" + active +
+                ", dateCreated=" + dateCreated +
+                ", lastUpdated=" + lastUpdated +
+                ", username='" + username + '\'' +
+                ", confirmPassword='" + confirmPassword + '\'' +
+                '}';
     }
 }

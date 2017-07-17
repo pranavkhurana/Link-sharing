@@ -108,11 +108,8 @@
                     <h5>Login</h5>
                 </div>
                 <div class="row">
-                    <div style="text-align: center;margin-bottom: 10px;color:red">${loginMessage}
-                        <form:errors path="user.password"/>
-                        <form:errors path="user.email"/>
-                    </div>
-                        <form:form action="login" method="post" class="form-horizontal login-form" commandName="user">
+                        <form:form action="login" method="post" class="form-horizontal login-form">
+                        <div style="text-align: center;margin-bottom: 10px;color:red">${loginMessage}</div>
 
                         <div class="form-group">
                             <label class="control-label col-sm-5" for="email">Email/Username*</label>
@@ -137,18 +134,14 @@
                     <h5>Register</h5>
                 </div>
                 <div class="row">
-                        <div style="text-align: center;margin-bottom: 10px;color:red">
-                            <form:errors path="user2.password"/>
-                            <form:errors path="user2.email"/>
-                            <form:errors path="user2.photo"/>
-                        </div>
                         <form:form action="register" method="post" commandName="user2" class="form-horizotal" enctype="multipart/form-data">
 
                         <div style="text-align: center;margin-bottom: 10px">${registerMessage}</div>
                         <div class="form-group">
                             <label class="control-label col-sm-5" for="first">First name*</label>
                             <div class="col-sm-7">
-                                <input type="text" class="form-control" id="first" name="firstname" required/>
+                                <input type="text" class="form-control" id="first" name="firstname"/>
+                                <form:errors path="firstname"/>
                             </div>
                         </div>
                         <div class="clearfix">
@@ -158,6 +151,7 @@
                             <label class="control-label col-sm-5" for="last">Last name*</label>
                             <div class="col-sm-7">
                                 <input type="text" class="form-control" id="last" name="lastname" required/>
+                                <form:errors path="lastname"/>
                             </div>
                         </div>
                         <div class="clearfix">
@@ -167,18 +161,21 @@
                             <label class="control-label col-sm-5" for="email">Email</label>
                             <div class="col-sm-7">
                                 <input type="email" class="form-control" id="email" name="email" required/>
+                                <form:errors path="email"/>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-sm-5" for="username">Username*</label>
                             <div class="col-sm-7">
                                 <input type="text" class="form-control" id="username" name="username" required/>
+                                <form:errors path="username"/>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="control-label col-sm-5" for="password">Password*</label>
                             <div class="col-sm-7">
                                 <input type="password" class="form-control" id="password" name="password" required/>
+                                <form:errors path="password"/>
                             </div>
                         </div>
                         <div class="form-group">
@@ -206,6 +203,16 @@
 
 
 </div><!--container-->
+
+
+<div class="container">
+    <!-- Trigger the modal with a button -->
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+
+
+</div>
+
 
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

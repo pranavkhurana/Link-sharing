@@ -4,10 +4,11 @@ import com.ttnd.dao.UserDao;
 import com.ttnd.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.Date;
 
-@Component
+@Service
 public class UserRegisterService {
 
     @Autowired
@@ -27,7 +28,7 @@ public class UserRegisterService {
 
     public String addUser(User user){
 
-        if(user.getConfirmPassword()!=user.getPassword())
+        if(!user.getConfirmPassword().equals(user.getPassword()))
             return "Passwords do not match";
 
         int uniqueness=userDao.checkUsernameAndEmailUniqueness(user);
