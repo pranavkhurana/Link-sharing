@@ -8,6 +8,7 @@ import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -43,5 +44,12 @@ public class TopicDao {
             return false;
         }
         else return true;
+    }
+    public List getSubscribedTopics(User user){
+        List<Topic> list=new ArrayList<Topic>();
+        Session session=sessionFactory.openSession();
+        Query query=session.createQuery("from Topic");  //to test only. change later to get only subscribed ones
+        list=query.list();
+        return list;
     }
 }

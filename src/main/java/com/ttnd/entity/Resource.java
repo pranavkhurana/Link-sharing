@@ -1,5 +1,7 @@
 package com.ttnd.entity;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -11,11 +13,13 @@ public class Resource {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     int resourceid;
 
+    @NotEmpty
     String description;
 
     @ManyToOne
     User createdBy;
 
+//    @NotEmpty
     @ManyToOne
     Topic topic;
 

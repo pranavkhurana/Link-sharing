@@ -6,6 +6,8 @@ import com.ttnd.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class TopicService {
 
@@ -21,5 +23,9 @@ public class TopicService {
             return topicDao.createTopic(topic,user);
         }
         return false;
+    }
+
+    public List getSubscribedTopics(User user){
+        return topicDao.getSubscribedTopics(user);
     }
 }

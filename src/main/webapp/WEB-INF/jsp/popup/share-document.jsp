@@ -14,11 +14,12 @@
                 <div class="popup">
                     <%--Register form content--%>
                     <div class="row">
-                        <form action="share-document" method="post" class="form-horizotal">
+                        <form:form action="share-document" method="post" class="form-horizotal" commandName="documentResource">
                             <div class="form-group">
                                 <label class="control-label col-md-5" for="doc">Document</label>
                                 <div class="col-md-7 col-sm-12">
-                                    <input type="file" class="form-control" id="doc" name="document"/>
+                                    <input type="file" class="form-control" id="doc" name="filePath" required/>
+                                    <form:errors path="filePath"></form:errors>
                                 </div>
                             </div>
                             <div class="clearfix">
@@ -28,6 +29,7 @@
                                 <label class="control-label col-sm-5" for="desc">Description*</label>
                                 <div class="col-sm-7">
                                     <textarea class="form-control" id="desc" name="description" required></textarea>
+                                    <form:errors path="description"></form:errors>
                                 </div>
                             </div>
                             <div class="clearfix">
@@ -40,6 +42,7 @@
                                         <option value="1">topic1</option>
                                         <option value="2">topic2</option>
                                     </select>
+                                    <form:errors path="topic"></form:errors>
                                 </div>
                             </div>
                             <div class="clearfix">
@@ -48,7 +51,7 @@
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                             <button type="submit" class="btn btn-default">Invite</button>
 
-                        </form>
+                        </form:form>
                     </div>
                 </div><!--create-topic-box-end-->
 

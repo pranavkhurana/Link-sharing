@@ -1,10 +1,13 @@
 package com.ttnd.entity;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 import javax.persistence.Entity;
 
 @Entity
 public class LinkResource extends Resource {
 
+    @NotEmpty
     String url;
 
     public String getUrl() {

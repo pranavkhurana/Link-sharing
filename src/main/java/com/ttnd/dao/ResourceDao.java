@@ -1,5 +1,7 @@
 package com.ttnd.dao;
 
+import com.ttnd.entity.DocumentResource;
+import com.ttnd.entity.LinkResource;
 import com.ttnd.entity.Resource;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -25,6 +27,14 @@ public class ResourceDao {
         Session session=sessionFactory.openSession();
         session.beginTransaction();
         session.save(resource);
+        session.getTransaction().commit();
+        return true;
+    }
+
+    public boolean addDocumentResource(DocumentResource documentResource){
+        Session session=sessionFactory.openSession();
+        session.beginTransaction();
+        session.save(documentResource);
         session.getTransaction().commit();
         return true;
     }
