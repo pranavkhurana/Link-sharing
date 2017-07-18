@@ -1,7 +1,9 @@
 package com.ttnd.controller;
 
+import com.ttnd.entity.Resource;
 import com.ttnd.entity.Topic;
 import com.ttnd.entity.User;
+import com.ttnd.service.ResourceService;
 import com.ttnd.service.UserRegisterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
@@ -16,6 +18,7 @@ import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.io.PrintWriter;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -25,6 +28,13 @@ public class LoginController {
     @Autowired
     UserRegisterService userService;
 
+    @Autowired
+    ResourceService resourceService;
+
+    public void setResourceService(ResourceService resourceService) {
+        this.resourceService = resourceService;
+    }
+
     public void setUserService(UserRegisterService userService) {
         this.userService = userService;
     }
@@ -32,15 +42,27 @@ public class LoginController {
     @RequestMapping("/")
     public ModelAndView home(){
         ModelAndView model1=new ModelAndView("index");
+
+        //for login form
         model1.addObject("user",new User());
+
+        //for registration form
         model1.addObject("user2",new User());
+
+        //recent shares
+        List list=resourceService.getRecentPublicResources(5);
+        model1.addObject("recentPublicResources",list);
+        for(int i=0;i<list.size();i++){
+            Resource res=(Resource)list.get(i);
+            System.out.println(res.getDescription());
+        }
         return model1;
     }
 
     @RequestMapping(value="/login",method=RequestMethod.POST)
     ModelAndView login(User user,HttpServletRequest request){
 
-        //to use binding result here make separate LoginCommand Dto
+        //to use binding result here, a separate dto need to be made
         User userFetched=userService.check(user);
         if(userFetched!=null){
             request.getSession().setAttribute("user",userFetched);

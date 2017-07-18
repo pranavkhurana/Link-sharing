@@ -14,12 +14,11 @@
                 <div class="popup">
                     <%--Register form content--%>
                     <div class="row">
-                        <form:form action="share-document" method="post" class="form-horizotal" commandName="documentResource">
+                        <form:form action="share-document" method="post" class="form-horizotal" commandName="documentResource" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label class="control-label col-md-5" for="doc">Document</label>
                                 <div class="col-md-7 col-sm-12">
-                                    <input type="file" class="form-control" id="doc" name="filePath" required/>
-                                    <form:errors path="filePath"></form:errors>
+                                    <input type="file" class="form-control" id="doc" name="file" required/>
                                 </div>
                             </div>
                             <div class="clearfix">

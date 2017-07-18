@@ -22,32 +22,11 @@ public class Resource {
     @ManyToOne
     Topic topic;
 
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     Date dateCreated;
 
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     Date lastUpdated;
-
-    @Transient
-    int topicid;
-
-    public void setTopicid(int topicid) {
-        this.topicid = topicid;
-    }
-
-    public int getTopicid() {
-        return topicid;
-    }
-
-    /*
-    public Integer getTopicid() {
-        return topicid;
-    }
-
-    public void setTopicid(Integer topicid) {
-        this.topicid = topicid;
-    }
-*/
 
     public int getResourceid() {
         return resourceid;

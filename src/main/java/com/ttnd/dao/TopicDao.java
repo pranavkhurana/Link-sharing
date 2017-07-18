@@ -40,15 +40,15 @@ public class TopicDao {
         query.setMaxResults(1);
         List list=query.list();
         if(list.size()>0) {
-            System.out.println("duplicate topic found this user");
+            System.out.println("duplicate topic found for this user");
             return false;
         }
         else return true;
     }
     public List getSubscribedTopics(User user){
-        List<Topic> list=new ArrayList<Topic>();
+        List<Topic> list;
         Session session=sessionFactory.openSession();
-        Query query=session.createQuery("from Topic");  //to test only. change later to get only subscribed ones
+        Query query=session.createQuery("from Topic order by dateCreated desc");  //to test only. change later to get only subscribed ones
         list=query.list();
         return list;
     }

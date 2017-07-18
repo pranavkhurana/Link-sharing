@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ResourceService {
 
@@ -22,5 +24,9 @@ public class ResourceService {
 
     public boolean addResource(Resource resource){
         return resourceDao.addResource(resource);
+    }
+
+    public List getRecentPublicResources(int noOfResources){
+        return resourceDao.getRecentPublicResources(noOfResources);
     }
 }

@@ -5,9 +5,12 @@ import com.ttnd.entity.LinkResource;
 import com.ttnd.entity.Resource;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 @Repository
 public class ResourceDao {
@@ -30,12 +33,13 @@ public class ResourceDao {
         session.getTransaction().commit();
         return true;
     }
-
-    public boolean addDocumentResource(DocumentResource documentResource){
+    public List getRecentPublicResources(int noOfResources){
         Session session=sessionFactory.openSession();
         session.beginTransaction();
-        session.save(documentResource);
-        session.getTransaction().commit();
-        return true;
+        Query query=session.createQuery("from Resource order by dateCreated desc");
+        query.setMaxResults(noOfResources);
+        Query query2=session.createQuery()
+        List list=query.list();
+        return list;
     }
 }

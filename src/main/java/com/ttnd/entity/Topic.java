@@ -15,10 +15,10 @@ public class Topic {
     @ManyToOne
     User createdBy;
 
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     Date dateCreated;
 
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     Date lastUpdated;
 
     Visibility visibility;
