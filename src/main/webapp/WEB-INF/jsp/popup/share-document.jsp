@@ -38,18 +38,16 @@
                             <div class="form-group">
                                 <label class="control-label col-sm-5" for="topic">Topic*</label>
                                 <div class="col-sm-7">
-                                    <select name="topic" id="topic" class="form-control">
-                                        <option value="1">topic1</option>
-                                        <option value="2">topic2</option>
-                                    </select>
-                                    <form:errors path="topic"></form:errors>
+                                    <form:select path="topic.topicid" id="topic">
+                                        <form:options items="${subscribedTopicList}" itemValue="topicid" itemLabel="name" />
+                                    </form:select>
                                 </div>
                             </div>
                             <div class="clearfix">
 
                             </div>
+                            <button type="submit" class="btn btn-default">Share</button>
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-default">Invite</button>
 
                         </form:form>
                     </div>

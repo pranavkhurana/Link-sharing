@@ -237,13 +237,17 @@
     </column>
     <column id="70" parent="19" name="password">
       <Position>9</Position>
-      <DataType>varchar(255)|0</DataType>
+      <DataType>varchar(30)|0</DataType>
     </column>
     <column id="71" parent="19" name="photo">
       <Position>10</Position>
-      <DataType>tinyblob|0</DataType>
+      <DataType>mediumblob|0</DataType>
     </column>
-    <key id="72" parent="19" name="PRIMARY">
+    <column id="72" parent="19" name="username">
+      <Position>11</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="73" parent="19" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>userid</ColNames>
       <Primary>1</Primary>

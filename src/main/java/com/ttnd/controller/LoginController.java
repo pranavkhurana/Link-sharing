@@ -29,7 +29,6 @@ public class LoginController {
         this.userService = userService;
     }
 
-
     @RequestMapping("/")
     public ModelAndView home(){
         ModelAndView model1=new ModelAndView("index");

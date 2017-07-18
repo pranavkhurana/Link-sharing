@@ -17,4 +17,17 @@ public class LinkResource extends Resource {
     public void setUrl(String url) {
         this.url = url;
     }
+
+    @Override
+    public String toString() {
+        return "LinkResource{" +
+                "url='" + url + '\'' +
+                ", resourceid=" + resourceid +
+                ", description='" + description + '\'' +
+                ", createdBy=" + createdBy +
+                ", topic=" + topic +
+                ", dateCreated=" + dateCreated +
+                ", lastUpdated=" + lastUpdated +
+                '}';
+    }
 }

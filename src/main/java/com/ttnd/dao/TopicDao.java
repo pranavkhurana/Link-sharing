@@ -52,4 +52,13 @@ public class TopicDao {
         list=query.list();
         return list;
     }
+    public Topic getTopic(int topicid){
+        Session session=sessionFactory.openSession();
+        Query query=session.createQuery("from Topic where topicid=?");
+        query.setParameter(0,topicid);
+        query.setMaxResults(1);
+        List list=query.list();
+        session.getTransaction().commit();
+        return (Topic)list.get(0);
+    }
 }

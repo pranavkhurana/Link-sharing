@@ -28,4 +28,8 @@ public class TopicService {
     public List getSubscribedTopics(User user){
         return topicDao.getSubscribedTopics(user);
     }
+
+    public Topic getTopic(int topicid){
+        return topicDao.getTopic(topicid);
+    }
 }

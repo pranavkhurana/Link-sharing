@@ -1,7 +1,6 @@
 <!-- Modal -->
 <div class="modal fade" id="create-topic-box" role="dialog">
     <div class="modal-dialog">
-
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
@@ -19,6 +18,18 @@
                                 <label class="control-label col-sm-5" for="name">Name*</label>
                                 <div class="col-sm-7">
                                     <input type="text" class="form-control" id="name" name="name" required/>
+                                    <script>
+                                        $(function(){
+                                            console.log("hello");
+                                            $("#name").on("input",function(){
+                                                $.ajax({
+                                                    url: "/hello",
+                                                    data:{email:"value"},
+                                                    success:function(d){console.log(d);}
+                                                });
+                                            })
+                                        });
+                                    </script>
                                 </div>
                             </div>
                             <div class="clearfix">

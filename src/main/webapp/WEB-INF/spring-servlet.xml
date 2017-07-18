@@ -59,6 +59,15 @@
     <mvc:resources mapping="/resources/**" location="/resources/"/>
     <mvc:annotation-driven/>
 
+    <!--to format Topic from topicid(in forms:select)-->
+    <!--<bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+        <property name="formatters">
+            <set>
+                <ref bean="topicFormatter"/>
+            </set>
+        </property>
+    </bean>-->
+
     <!--<bean id="validator"
               class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"/>-->
 </beans>

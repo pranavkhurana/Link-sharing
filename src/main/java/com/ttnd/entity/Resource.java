@@ -19,7 +19,6 @@ public class Resource {
     @ManyToOne
     User createdBy;
 
-//    @NotEmpty
     @ManyToOne
     Topic topic;
 
@@ -28,6 +27,27 @@ public class Resource {
 
     @Temporal(TemporalType.DATE)
     Date lastUpdated;
+
+    @Transient
+    int topicid;
+
+    public void setTopicid(int topicid) {
+        this.topicid = topicid;
+    }
+
+    public int getTopicid() {
+        return topicid;
+    }
+
+    /*
+    public Integer getTopicid() {
+        return topicid;
+    }
+
+    public void setTopicid(Integer topicid) {
+        this.topicid = topicid;
+    }
+*/
 
     public int getResourceid() {
         return resourceid;
