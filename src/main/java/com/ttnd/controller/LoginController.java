@@ -17,10 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.io.PrintWriter;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 @Controller
 public class LoginController {
@@ -52,10 +49,7 @@ public class LoginController {
         //recent shares
         List list=resourceService.getRecentPublicResources(5);
         model1.addObject("recentPublicResources",list);
-        for(int i=0;i<list.size();i++){
-            Resource res=(Resource)list.get(i);
-            System.out.println(res.getDescription());
-        }
+
         return model1;
     }
 

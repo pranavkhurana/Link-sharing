@@ -16,7 +16,7 @@ public class Subscription {
     @ManyToOne
     User user;
 
-    enum Seriousness{Casual,Serious,VerySerious}
+    public enum Seriousness{Casual,Serious,VerySerious}
 
     Seriousness seriousness;
 

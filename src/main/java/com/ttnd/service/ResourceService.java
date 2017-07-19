@@ -1,6 +1,8 @@
 package com.ttnd.service;
 
 import com.ttnd.dao.ResourceDao;
+import com.ttnd.entity.DocumentResource;
+import com.ttnd.entity.LinkResource;
 import com.ttnd.entity.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -22,7 +24,10 @@ public class ResourceService {
         this.resourceDao = resourceDao;
     }
 
-    public boolean addResource(Resource resource){
+    public boolean addResource(LinkResource resource){
+        return resourceDao.addResource(resource);
+    }
+    public boolean addResource(DocumentResource resource){
         return resourceDao.addResource(resource);
     }
 

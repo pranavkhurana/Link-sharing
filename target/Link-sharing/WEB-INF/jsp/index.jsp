@@ -1,6 +1,8 @@
+<%@ page import="java.util.Date" %>
+<%@ page import="com.ttnd.entity.Resource" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,43 +32,40 @@
     <div class="row">
         <div class="col-sm-7">
             <div class="wrap">
+                <%--Recent share panel--%>
                 <div class="row rounded-top">
                     <h5>Recent Shares</h5>
                 </div>
+
                 <div class="row">
+                    <c:forEach items="${recentPublicResources}" var="res">
+                    <%--recent share media--%>
                     <div class="media">
                         <div class="media-left">
                             <a class="dp" href="#"><span class="glyphicon glyphicon-user"></span></a>
                         </div>
                         <div class="media-body">
-                            <a class="black" href="#"><h4 class="media-heading">Uday Pratap Singh</h4></a>
-                            <span class="text-muted">@uday 5min</span>
-                            <a class="right" href="#">Grails</a>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <a class="black" href="#"><h4 class="media-heading">${res.createdBy.firstname} ${res.createdBy.lastname}</h4></a>
+                            <span class="text-muted">@${res.createdBy.username}
+                                <%
+                                    Resource resource=(Resource)pageContext.getAttribute("res");
+                                    long diff=new Date().getTime()-resource.getDateCreated().getTime();
+                                    out.print(diff/3600000+"hr"+" "+(diff%3600000)/60000+"min");
+                                %>
+                            </span>
+                            <a class="right" href="#">${res.topic.name}</a>
+                            <p>${res.description}</p>
                             <a class="black" href="#"><span class="fa fa-facebook-square"></span></a>
                             <a class="black" href="#"><span class="fa fa-twitter"></span></a>
                             <a class="black" href="#"><span class="fa fa-google-plus"></span></a>
                             <a class="right" href="#">View post</a>
                         </div>
-                    </div>
-                    <div class="media">
-                        <div class="media-left">
-                            <a class="dp" href="#"><span class="glyphicon glyphicon-user"></span></a>
-                        </div>
-                        <div class="media-body">
-                            <a class="black" href="#"><h4 class="media-heading">Uday Pratap Singh</h4></a>
-                            <span class="text-muted">@uday 5min</span>
-                            <a class="right" href="#">Grails</a>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                            <a class="black" href="#"><span class="fa fa-facebook-square"></span></a>
-                            <a class="black" href="#"><span class="fa fa-twitter"></span></a>
-                            <a class="black" href="#"><span class="fa fa-google-plus"></span></a>
-                            <a class="right" href="#">View post</a>
-                        </div>
-                    </div>
-                </div>
+                    </div><%--recent share media--%>
+                    </c:forEach>
+                </div><%--recent share--%>
                 <hr>
 
+                <%--Top post panel    --%>
                 <div class="row rounded-top">
                     <h5 class="inline">Top Posts</h5>
                     <div class="dropdown">
@@ -80,6 +79,7 @@
                         </ul>
                     </div>
                 </div>
+                <%--Top post media--%>
                 <div class="row">
                     <div class="media">
                         <div class="media-left">
@@ -203,16 +203,6 @@
 
 
 </div><!--container-->
-
-
-<div class="container">
-    <!-- Trigger the modal with a button -->
-    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
-
-
-
-</div>
-
 
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

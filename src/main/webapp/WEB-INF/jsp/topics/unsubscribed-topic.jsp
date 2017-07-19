@@ -4,11 +4,11 @@
         <a class="dp" href="#"><span class="glyphicon glyphicon-user"></span></a>
     </div>
     <div class="media-body">
-        <a class="" href="#"><h3 class="media-heading">Grails</h3></a>
+        <a class="" href="#"><h3 class="media-heading">${topic.name}</h3></a>
         <div class="row margin-top-15">
             <div class="col-xs-5">
-                <span class="text-muted">@uday</span>
-                <p><a>Subscribe</a></p>
+                <span class="text-muted">@${topic.createdBy.username}</span>
+                <p><a onclick="submitSubscriptionForm(${topic.topicid})">Subscribe</a></p>
             </div>
             <div class="col-xs-4">
                 <span class="text-muted">Subscriptions</span>
@@ -21,3 +21,5 @@
         </div>
     </div>
 </div>
+<hr>
+

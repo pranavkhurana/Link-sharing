@@ -18,4 +18,17 @@ public class DocumentResource extends Resource{
     public void setFilePath(String filePath) {
         this.filePath = filePath;
     }
+
+    @Override
+    public String toString() {
+        return "DocumentResource{" +
+                "resourceid=" + resourceid +
+                ", filePath='" + filePath + '\'' +
+                ", description='" + description + '\'' +
+                ", createdBy=" + createdBy +
+                ", topic=" + topic +
+                ", dateCreated=" + dateCreated +
+                ", lastUpdated=" + lastUpdated +
+                '}';
+    }
 }

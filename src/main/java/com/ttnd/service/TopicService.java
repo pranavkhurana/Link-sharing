@@ -29,6 +29,10 @@ public class TopicService {
         return topicDao.getSubscribedTopics(user);
     }
 
+    public List getTrendingTopics(){
+        return topicDao.getTrendingTopics();
+    }
+
     public Topic getTopic(int topicid){
         return topicDao.getTopic(topicid);
     }

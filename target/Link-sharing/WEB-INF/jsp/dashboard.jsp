@@ -1,5 +1,9 @@
+<%@ page import="com.ttnd.entity.Topic" %>
+<%@ page import="com.ttnd.entity.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="display" uri="http://www.springframework.org/tags/form" %>
 
 <!DOCTYPE html>
 <html>
@@ -60,8 +64,16 @@
             <h5 class="inline">Trending topics</h5>
         </div>
         <div class="row">
-            <%@include file="topics/personal-topic.jsp"%>
-            <%@include file="topics/unsubscribed-topic.jsp"%>
+            <c:forEach items="${trendingTopicList}" var="topic">
+                <%  Topic topic=(Topic)pageContext.getAttribute("topic");
+                    User user=(User) request.getAttribute("user");
+                    if(topic.getCreatedBy().getUserid()==user.getUserid()){
+                %>
+                        <%@include file="topics/personal-topic.jsp"%>
+                <%  }else{%>
+                        <%@include file="topics/unsubscribed-topic.jsp"%>
+                <%}%>
+            </c:forEach>
         </div>
         <hr>
         <%--Trending topics end--%>
@@ -69,13 +81,7 @@
 </div>
 <div class="col-md-7">
     <div class="wrap">
-        <div class="text-center font-weight-bold"><h3>${popupMessage}</h3></div>
-            <%--Popups--%>
-            <%@include file="popup/create-topic.jsp"%>
-            <%@include file="popup/send-invite.jsp"%>
-            <%@include file="popup/share-document.jsp"%>
-            <%@include file="popup/share-link.jsp"%>
-
+        <%--<div class="text-center font-weight-bold"><h3>${popupMessage}</h3></div>--%>
             <!--Inbox panel-->
             <div class="row rounded-top">
                 <h5>Inbox</h5>
@@ -91,6 +97,18 @@
 </div> <!--col-md-7-->
 </div><!--row-->
 </div><!--container-->
+
+<%--form for subscibing(submitted through js)--%>
+<form:form id="subscribeform" action="subscribe" commandName="subscription" method="post" cssStyle="display:none">
+    <form:input id="subsTopicid" path="topic.topicid" value=""/>
+    <form:input id="subsUserid" path="user.userid" value="${user.userid}"/>
+</form:form>
+<script>
+    function submitSubscriptionForm(topicid){
+        $("#subscribeform #subsTopicid").val(topicid);
+        $("#subscribeform").submit();
+    }
+</script>
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- Latest compiled JavaScript -->

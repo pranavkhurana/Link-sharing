@@ -26,19 +26,28 @@ public class ResourceDao {
         this.sessionFactory = sessionFactory;
     }
 
-    public boolean addResource(Resource resource){
+    public boolean addResource(LinkResource resource){
         Session session=sessionFactory.openSession();
         session.beginTransaction();
         session.save(resource);
         session.getTransaction().commit();
         return true;
     }
+
+    public boolean addResource(DocumentResource resource){
+        Session session=sessionFactory.openSession();
+        session.beginTransaction();
+        session.save(resource);
+        session.getTransaction().commit();
+        return true;
+    }
+
     public List getRecentPublicResources(int noOfResources){
         Session session=sessionFactory.openSession();
         session.beginTransaction();
-        Query query=session.createQuery("from Resource order by dateCreated desc");
+//        Query query=session.createQuery("select r,u.firstname,u.lastname,t.name from Resource r,User u,Topic t where r.topic=t and r.createdBy=u");
+        Query query =session.createQuery("from Resource r where r.topic.visibility=0 order by dateCreated desc");
         query.setMaxResults(noOfResources);
-        Query query2=session.createQuery()
         List list=query.list();
         return list;
     }

@@ -75,4 +75,16 @@ public class Resource {
     public void setLastUpdated(Date lastUpdated) {
         this.lastUpdated = lastUpdated;
     }
+
+    @Override
+    public String toString() {
+        return "Resource{" +
+                "resourceid=" + resourceid +
+                ", description='" + description + '\'' +
+                ", createdBy=" + createdBy +
+                ", topic=" + topic +
+                ", dateCreated=" + dateCreated +
+                ", lastUpdated=" + lastUpdated +
+                '}';
+    }
 }

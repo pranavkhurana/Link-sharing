@@ -61,4 +61,22 @@ public class TopicDao {
         session.getTransaction().commit();
         return (Topic)list.get(0);
     }
+    public List getTrendingTopics(){
+        List<Topic> list;
+        Session session=sessionFactory.openSession();
+
+        Query query=session.createQuery("select res.topic from Resource res group by res.topic having res.topic.visibility=0 order by count(res.resourceid) desc");
+        query.setMaxResults(5);
+
+        list=query.list();
+
+//        List<Topic> list2;
+//        Query query2=session.createQuery("select A,B from (select res.topic,count(res.resourceid) from Resource res group by res.topic) as A join (select count(s.subscriptionid),s.topic from Subscription s group by s.topic) as B on A.topic=B.topic");
+//        list2=query2.list();
+//        for(int i=0;i<list2.size();i++){
+//            System.out.println(list2.get(i));
+//        }
+
+        return list;
+    }
 }

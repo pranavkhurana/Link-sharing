@@ -5,13 +5,13 @@
     </div>
     <div class="media-body">
         <form action="" method="">
-            <input type="text" placeholder="Grails" name="" value="">
+            <input type="text" placeholder="${topic.name}" name="" value="">
             <input type="submit" value="save">
             <input type="submit" value="cancel">
         </form>
         <div class="row margin-top-16">
             <div class="col-xs-5">
-                <span class="text-muted">@uday</span>
+                <span class="text-muted">@${topic.createdBy.username}</span>
                 <p><a>Unsubscribe</a></p>
             </div>
             <div class="col-xs-4">
@@ -42,3 +42,4 @@
                   <a class="fa fa-trash fa-2x" aria-hidden="true"></a>
                 </span>
 </div>
+<hr>

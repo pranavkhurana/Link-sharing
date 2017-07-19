@@ -24,7 +24,7 @@ public class CreateTopicController {
     @RequestMapping(value = "/create-topic",method = RequestMethod.POST)
     public ModelAndView createTopic(@ModelAttribute("topic")Topic topic,HttpSession session){
 
-        topic.setName(topic.getName().toUpperCase());   //converting topic name to uppercase to avoid duplicacy due to case
+        topic.setName(topic.getName().substring(0,1).toUpperCase()+""+topic.getName().substring(1).toLowerCase());
 
         boolean status=topicService.createTopic(topic,(User)session.getAttribute("user"));
         String message=null;
