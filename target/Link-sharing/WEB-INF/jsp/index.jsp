@@ -140,9 +140,9 @@
 
                         <div style="text-align: center;margin-bottom: 10px">${registerMessage}</div>
                         <div class="form-group">
-                            <label class="control-label col-sm-5" for="first" required>First name*</label>
+                            <label class="control-label col-sm-5" for="first">First name*</label>
                             <div class="col-sm-7">
-                                <input type="text" class="form-control" id="first" name="firstname"/>
+                                <input type="text" class="form-control" id="first" name="firstname" required/>
                                 <form:errors path="firstname"/>
                             </div>
                         </div>

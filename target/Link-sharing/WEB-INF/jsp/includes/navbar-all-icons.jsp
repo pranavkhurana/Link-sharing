@@ -18,6 +18,7 @@
         </form>
     </div>
 </div><!-- navbar ends -->
+
 <div class="text-center font-weight-bold"><h3>${popupMessage}</h3></div>
 <%--Popups--%>
 <%@include file="../popup/create-topic.jsp"%>

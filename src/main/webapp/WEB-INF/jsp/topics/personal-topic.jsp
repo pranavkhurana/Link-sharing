@@ -12,7 +12,7 @@
         <div class="row margin-top-16">
             <div class="col-xs-5">
                 <span class="text-muted">@${topic.createdBy.username}</span>
-                <p><a>Unsubscribe</a></p>
+                <%--<p class="text-muted"><a>Unsubscribe</a></p>--%>
             </div>
             <div class="col-xs-4">
                 <span class="text-muted">Subscriptions</span>
