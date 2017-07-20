@@ -24,3 +24,4 @@
 <%@include file="../popup/send-invite.jsp"%>
 <%@include file="../popup/share-document.jsp"%>
 <%@include file="../popup/share-link.jsp"%>
+<%@include file="subscribe-form.jsp"%>

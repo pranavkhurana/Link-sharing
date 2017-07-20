@@ -3,13 +3,15 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<c:set var="req" value="${pageContext.request}" />
+<c:set var="baseURL" value="${req.scheme}://${req.serverName}:${req.serverPort}${req.contextPath}" />
 <!DOCTYPE html>
 <html>
 <head>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="resources/css/custom.css">
+    <link rel="stylesheet" href="${baseURL}/resources/css/custom.css">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta charset="utf-8">
     <title>Home | Link Sharing</title>
@@ -27,7 +29,7 @@
         </form>
     </div>
 </div>
-
+<div style="text-align: center"><h3>${message}</h3></div>
 <div class="container">
     <div class="row">
         <div class="col-sm-7">
@@ -53,7 +55,7 @@
                                     out.print(diff/3600000+"hr"+" "+(diff%3600000)/60000+"min");
                                 %>
                             </span>
-                            <a class="right" href="#">${res.topic.name}</a>
+                            <a class="right" href="${baseURL}/show-topic/${res.topic.topicid}">${res.topic.name}</a>
                             <p>${res.description}</p>
                             <a class="black" href="#"><span class="fa fa-facebook-square"></span></a>
                             <a class="black" href="#"><span class="fa fa-twitter"></span></a>
@@ -108,7 +110,7 @@
                     <h5>Login</h5>
                 </div>
                 <div class="row">
-                        <form:form action="login" method="post" class="form-horizontal login-form">
+                        <form:form action="${baseURL}/login" method="post" class="form-horizontal login-form">
                         <div style="text-align: center;margin-bottom: 10px;color:red">${loginMessage}</div>
 
                         <div class="form-group">
@@ -134,11 +136,11 @@
                     <h5>Register</h5>
                 </div>
                 <div class="row">
-                        <form:form action="register" method="post" commandName="user2" class="form-horizotal" enctype="multipart/form-data">
+                        <form:form action="${baseURL}/register" method="post" commandName="user2" class="form-horizotal" enctype="multipart/form-data">
 
                         <div style="text-align: center;margin-bottom: 10px">${registerMessage}</div>
                         <div class="form-group">
-                            <label class="control-label col-sm-5" for="first">First name*</label>
+                            <label class="control-label col-sm-5" for="first" required>First name*</label>
                             <div class="col-sm-7">
                                 <input type="text" class="form-control" id="first" name="firstname"/>
                                 <form:errors path="firstname"/>

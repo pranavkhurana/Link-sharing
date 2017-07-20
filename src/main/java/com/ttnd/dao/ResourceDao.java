@@ -3,6 +3,7 @@ package com.ttnd.dao;
 import com.ttnd.entity.DocumentResource;
 import com.ttnd.entity.LinkResource;
 import com.ttnd.entity.Resource;
+import com.ttnd.entity.Topic;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
@@ -49,6 +50,18 @@ public class ResourceDao {
         Query query =session.createQuery("from Resource r where r.topic.visibility=0 order by dateCreated desc");
         query.setMaxResults(noOfResources);
         List list=query.list();
+        session.getTransaction().commit();
+        return list;
+    }
+    public List getPosts(Topic topic,int pageno,int noofrecords){
+        Session session=sessionFactory.openSession();
+        session.beginTransaction();
+        Query query=session.createQuery("from Resource where topic=?");
+        query.setParameter(0,topic);
+        query.setFirstResult(noofrecords*(pageno-1));
+        query.setMaxResults(noofrecords);
+        List list=query.list();
+        session.getTransaction().commit();
         return list;
     }
 }

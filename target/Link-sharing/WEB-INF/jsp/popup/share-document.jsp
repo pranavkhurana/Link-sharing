@@ -14,7 +14,7 @@
                 <div class="popup">
                     <%--Register form content--%>
                     <div class="row">
-                        <form:form action="share-document" method="post" class="form-horizotal" commandName="documentResource" enctype="multipart/form-data">
+                        <form:form action="${baseURL}/share-document" method="post" class="form-horizotal" commandName="documentResourceCommand" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label class="control-label col-md-5" for="doc">Document</label>
                                 <div class="col-md-7 col-sm-12">
@@ -45,6 +45,8 @@
                             <div class="clearfix">
 
                             </div>
+                            <input type="hidden" name="uri" value="${uri}">
+
                             <button type="submit" class="btn btn-default">Share</button>
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 

@@ -13,7 +13,7 @@
                 <div class="popup">
                     <%--Register form content--%>
                     <div class="row">
-                        <form:form action="create-topic" method="post" class="form-horizotal" commandName="topic">
+                        <form:form action="${baseURL}/create-topic" method="post" class="form-horizotal" commandName="topicCommand">
                             <div class="form-group">
                                 <label class="control-label col-sm-5" for="name">Name*</label>
                                 <div class="col-sm-7">
@@ -33,6 +33,7 @@
                             </div>
                             <div class="clearfix">
                             </div>
+                            <input type="hidden" name="uri" value="${uri}"/>
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                             <button type="submit" class="btn btn-default">Create</button>
 

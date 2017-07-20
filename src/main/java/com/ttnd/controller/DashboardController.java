@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
-public class DashboardController {
+public class DashboardController extends BaseController{
 
     @Autowired
     TopicService topicService;
@@ -25,23 +25,23 @@ public class DashboardController {
         ModelAndView model=new ModelAndView("dashboard");
 
         //create-document form command
-        model.addObject("documentResource",new DocumentResource());
+        //model.addObject("documentResource",new DocumentResource());
 
         //create-link form command
-        model.addObject("linkResource",new LinkResource());
+        //model.addObject("linkResource",new LinkResource());
 
         //user from session for displaying
         model.addObject("user",user);
 
         //create-topic form command
-        model.addObject("topic",new Topic());
+        //model.addObject("topic",new Topic());
 
         //subscribe form command
-        model.addObject("subscription",new Subscription());
+        //model.addObject("subscription",new Subscription());
 
         //subscribed topics
-        List subscribedTopicList=topicService.getSubscribedTopics(user);
-        model.addObject("subscribedTopicList",subscribedTopicList);
+//        List subscribedTopicList=topicService.getSubscribedTopics(user);
+//        model.addObject("subscribedTopicList",subscribedTopicList);
 
         //trending topics
         List trendingTopicList=topicService.getTrendingTopics();

@@ -23,7 +23,7 @@ import java.io.BufferedOutputStream;
 import java.io.FileOutputStream;
 
 @Controller
-public class ShareResourceController {
+public class ShareResourceController extends BaseController{
 
     @Autowired
     ShareResourceService shareResourceService;
@@ -33,7 +33,7 @@ public class ShareResourceController {
     }
 
     @RequestMapping("/share-document")
-    public ModelAndView shareDocument(@Valid @ModelAttribute DocumentResource documentResource,BindingResult bindingResult,HttpSession session,@RequestParam MultipartFile file){
+    public ModelAndView shareDocument(@Valid @ModelAttribute DocumentResource documentResource,BindingResult bindingResult,HttpSession session,@RequestParam MultipartFile file, @RequestParam String uri){
 
         User user=(User)session.getAttribute("user");
         String popupMessage=null;
@@ -64,11 +64,16 @@ public class ShareResourceController {
 
         }
 
-        return new ModelAndView("forward:/dashboard","popupMessage", popupMessage);
+        ModelAndView model;
+        if(uri!=null) model=new ModelAndView(uri);
+        else model=new ModelAndView("forward:/dashboard");
+
+        model.addObject("popupMessage", popupMessage);
+        return model;
     }
 
     @RequestMapping("/share-link")
-    public ModelAndView shareLink(@ModelAttribute("linkResource") @Valid LinkResource linkResource, BindingResult bindingResult,HttpSession session){
+    public ModelAndView shareLink(@ModelAttribute("linkResource") @Valid LinkResource linkResource, BindingResult bindingResult,HttpSession session,@RequestParam String uri){
 
         User user=(User)session.getAttribute("user");
         String popupMessage=null;
@@ -88,7 +93,13 @@ public class ShareResourceController {
             else popupMessage="<p style='color:red'>There was an error.</p>";
 
         }
-        return new ModelAndView("forward:/dashboard","popupMessage", popupMessage);
+
+        ModelAndView model;
+        if(uri!=null) model=new ModelAndView(uri);
+        else model=new ModelAndView("forward:/dashboard");
+
+        model.addObject("popupMessage",popupMessage);
+        return model;
     }
 
 

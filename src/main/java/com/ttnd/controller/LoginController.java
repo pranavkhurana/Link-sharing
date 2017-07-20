@@ -20,7 +20,7 @@ import java.io.PrintWriter;
 import java.util.*;
 
 @Controller
-public class LoginController {
+public class LoginController extends BaseController{
 
     @Autowired
     UserRegisterService userService;
@@ -56,11 +56,13 @@ public class LoginController {
     @RequestMapping(value="/login",method=RequestMethod.POST)
     ModelAndView login(User user,HttpServletRequest request){
 
-        //to use binding result here, a separate dto need to be made
+        //to use jsr validation here, a separate dto need to be made (skipping for now)
+
+        //check user existence in db
         User userFetched=userService.check(user);
         if(userFetched!=null){
             request.getSession().setAttribute("user",userFetched);
-            ModelAndView m=new ModelAndView("forward:/dashboard");
+            ModelAndView m=new ModelAndView("forward:/dashboard","popupMessage","<p style='color:green'>Welcome!</p>");
             return m;
         }
         return new ModelAndView("forward:/","loginMessage","Invalid Email or Password. Please try again.");
@@ -70,17 +72,19 @@ public class LoginController {
     ModelAndView register(@RequestParam CommonsMultipartFile file, @Valid @ModelAttribute("user2") User user,BindingResult bindingResult, HttpSession session){
 
         if(bindingResult.hasErrors()){
-            return new ModelAndView("index");
+            return new ModelAndView("forward:/");
         }
 
+        //converting file to byte[] and storing in user object
         byte[] photo=null;
         if(!file.isEmpty())
             photo=file.getBytes();
         user.setPhoto(photo);
 
-        ModelAndView model=new ModelAndView("index");
+        ModelAndView model=new ModelAndView("forward:/");
         String status=userService.addUser(user);
 
+        //setting registration status as message object
         if(status.equals("success"))
             model.addObject("registerMessage","<span style='color:green'>Registration successful. Login to proceed.</span>");
         else

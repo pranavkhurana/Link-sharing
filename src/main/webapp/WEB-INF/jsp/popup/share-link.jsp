@@ -13,7 +13,7 @@
                 <div class="popup">
                     <%--Register form content--%>
                     <div class="row">
-                        <form:form action="share-link" method="post" class="form-horizotal" commandName="linkResource">
+                        <form:form action="${baseURL}/share-link" method="post" class="form-horizotal" commandName="linkResourceCommand">
                             <div class="form-group">
                                 <label class="control-label col-md-5" for="link">Link</label>
                                 <div class="col-md-7">
@@ -43,6 +43,8 @@
                             <div class="clearfix">
 
                             </div>
+                            <input type="hidden" name="uri" value="${uri}">
+
                             <button type="submit" class="btn btn-default">Share</button>
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 

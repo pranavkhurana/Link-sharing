@@ -4,6 +4,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="display" uri="http://www.springframework.org/tags/form" %>
+<c:set var="uri" value="forward:/dashboard"></c:set>
 
 <!DOCTYPE html>
 <html>
@@ -98,7 +99,8 @@
 </div><!--row-->
 </div><!--container-->
 
-<%--form for subscibing(submitted through js)--%>
+<%--
+&lt;%&ndash;form for subscibing(submitted through js)&ndash;%&gt;
 <form:form id="subscribeform" action="subscribe" commandName="subscription" method="post" cssStyle="display:none">
     <form:input id="subsTopicid" path="topic.topicid" value=""/>
     <form:input id="subsUserid" path="user.userid" value="${user.userid}"/>
@@ -109,6 +111,7 @@
         $("#subscribeform").submit();
     }
 </script>
+--%>
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- Latest compiled JavaScript -->
