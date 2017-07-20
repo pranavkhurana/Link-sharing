@@ -3,17 +3,17 @@ package com.ttnd.controller;
 import com.ttnd.entity.*;
 import com.ttnd.service.TopicService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
+import java.io.FileOutputStream;
 import java.util.List;
 
 @Controller
-public class DashboardController extends BaseController{
+public class DashboardController extends ParentController {
 
     @Autowired
     TopicService topicService;
@@ -23,6 +23,19 @@ public class DashboardController extends BaseController{
 
         User user=(User)session.getAttribute("user");
         ModelAndView model=new ModelAndView("dashboard");
+
+        //converting photo bytes[] into image
+        if(user!=null&& user.getPhoto()!=null){
+            String path=session.getServletContext().getRealPath("/");
+            FileOutputStream fos=null;
+            try {
+                fos = new FileOutputStream(path+"resources/images/"+user.getUserid()+".jpg");
+                fos.write(user.getPhoto());
+                fos.close();
+            }catch(Exception e) {
+                System.out.println(e);
+            }
+        }
 
         //create-document form command
         //model.addObject("documentResource",new DocumentResource());

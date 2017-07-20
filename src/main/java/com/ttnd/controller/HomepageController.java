@@ -1,14 +1,10 @@
 package com.ttnd.controller;
 
-import com.ttnd.entity.Resource;
-import com.ttnd.entity.Topic;
 import com.ttnd.entity.User;
 import com.ttnd.service.ResourceService;
 import com.ttnd.service.UserRegisterService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
@@ -16,11 +12,10 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
-import java.io.PrintWriter;
 import java.util.*;
 
 @Controller
-public class LoginController extends BaseController{
+public class HomepageController extends ParentController {
 
     @Autowired
     UserRegisterService userService;
@@ -91,14 +86,5 @@ public class LoginController extends BaseController{
             model.addObject("registerMessage","<span style='color:red'>"+status+"</span>");
         return model;
 
-        /*String path=session.getServletContext().getRealPath("/");
-        FileOutputStream fos=null;
-        try {
-            fos = new FileOutputStream(path+"resources/images/"+user.getEmail()+".jpg");
-            fos.write(photo);
-            fos.close();
-        }catch(Exception e) {
-            System.out.println(e);
-        }*/
     }
 }

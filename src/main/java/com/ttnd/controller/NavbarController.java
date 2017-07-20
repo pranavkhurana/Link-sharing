@@ -2,17 +2,16 @@ package com.ttnd.controller;
 
 import com.ttnd.entity.DocumentResource;
 import com.ttnd.entity.LinkResource;
+import com.ttnd.entity.Topic;
 import com.ttnd.entity.User;
 import com.ttnd.service.ShareResourceService;
+import com.ttnd.service.TopicService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.convert.ConversionService;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
@@ -23,7 +22,9 @@ import java.io.BufferedOutputStream;
 import java.io.FileOutputStream;
 
 @Controller
-public class ShareResourceController extends BaseController{
+public class NavbarController extends ParentController {
+    @Autowired
+    TopicService topicService;
 
     @Autowired
     ShareResourceService shareResourceService;
@@ -32,8 +33,32 @@ public class ShareResourceController extends BaseController{
         this.shareResourceService = shareResourceService;
     }
 
+    public TopicService getTopicService() {
+        return topicService;
+    }
+
+    @RequestMapping(value = "/create-topic",method = RequestMethod.POST)
+    public ModelAndView createTopic(@ModelAttribute("topic")Topic topic, HttpSession session, @RequestParam String uri){
+
+        topic.setName(topic.getName().substring(0,1).toUpperCase()+""+topic.getName().substring(1).toLowerCase());
+
+        boolean status=topicService.createTopic(topic,(User)session.getAttribute("user"));
+        String message=null;
+
+        if(status) message="<p style='color:green'>Topic created successfully.</p>";
+        else message="<p style='color:red'>Topic with same name already exists.</p>";
+
+        ModelAndView model;
+        if(uri!=null)
+            model=new ModelAndView(uri);
+        else model=new ModelAndView("forward:/dashboard");
+
+        model.addObject("popupMessage",message);
+        return model;
+    }
+
     @RequestMapping("/share-document")
-    public ModelAndView shareDocument(@Valid @ModelAttribute DocumentResource documentResource,BindingResult bindingResult,HttpSession session,@RequestParam MultipartFile file, @RequestParam String uri){
+    public ModelAndView shareDocument(@Valid @ModelAttribute DocumentResource documentResource, BindingResult bindingResult, HttpSession session, @RequestParam MultipartFile file, @RequestParam String uri){
 
         User user=(User)session.getAttribute("user");
         String popupMessage=null;
@@ -73,7 +98,7 @@ public class ShareResourceController extends BaseController{
     }
 
     @RequestMapping("/share-link")
-    public ModelAndView shareLink(@ModelAttribute("linkResource") @Valid LinkResource linkResource, BindingResult bindingResult,HttpSession session,@RequestParam String uri){
+    public ModelAndView shareLink(@ModelAttribute("linkResource") @Valid LinkResource linkResource, BindingResult bindingResult, HttpSession session, @RequestParam String uri){
 
         User user=(User)session.getAttribute("user");
         String popupMessage=null;

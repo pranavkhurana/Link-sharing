@@ -30,6 +30,8 @@
                     <div class="media">
                         <div class="media-left">
                             <a class="dp" href="#"><span class="glyphicon glyphicon-user"></span></a>
+                            <%--<a class="dp" href="#"><img src="${baseURL}/resources/images/${user.userid}.jpg"></a>--%>
+
                         </div>
                         <div class="media-body">
                             <a class="black" href="#"><h2 class="media-heading">${user.firstname} ${user.lastname}</h2></a>

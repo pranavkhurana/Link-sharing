@@ -155,7 +155,7 @@ public class User {
                 ", password='" + password + '\'' +
                 ", firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +
-                ", photo=" + Arrays.toString(photo) +
+                ", photo=" + "" +
                 ", admin=" + admin +
                 ", active=" + active +
                 ", dateCreated=" + dateCreated +

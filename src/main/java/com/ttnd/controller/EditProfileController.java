@@ -14,7 +14,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/edit-profile")
-public class EditProfileController extends BaseController{
+public class EditProfileController extends ParentController {
 
     @Autowired
     TopicService topicService;

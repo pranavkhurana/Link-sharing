@@ -30,14 +30,6 @@ public class UserDao {
 
     public User check(User user){
 
-        /*User u=new User();
-        u.setFirstname("anurag");u.setEmail("anu@gmail.com");u.setPassword("abcd");
-        Session session2=sessionFactory.openSession();
-        session2.beginTransaction();
-        session2.save(u);
-        session2.getTransaction().commit();*/
-
-
         Session session=sessionFactory.openSession();
         session.beginTransaction();
 
