@@ -58,7 +58,6 @@ public class TopicDao {
         query.setMaxResults(1);
         List list=query.list();
         session.getTransaction().commit();
-        System.out.println(list.get(0));
         return (Topic)list.get(0);
     }
     public List getTrendingTopics(){
@@ -85,4 +84,26 @@ public class TopicDao {
         return list;
     }
 
+    public List getAllTopicsForUser(User user,int pageno,int records){
+
+        Session session=sessionFactory.openSession();
+        session.beginTransaction();
+        Query query=session.createQuery("from Topic where createdBy=?");
+        query.setParameter(0,user);
+        query.setFirstResult(records*(pageno-1));
+        query.setMaxResults(records);
+        List list=query.list();
+        session.getTransaction().commit();
+        return list;
+    }
+
+    public Long getNoOfTopicsForUser(User user){
+        Session session=sessionFactory.openSession();
+        session.beginTransaction();
+        Query query=session.createQuery("select count(t.topicid) from Topic t where t.createdBy=?");
+        query.setParameter(0,user);
+        Long noOfTopics=(Long)query.uniqueResult();
+        session.getTransaction().commit();
+        return noOfTopics;
+    }
 }

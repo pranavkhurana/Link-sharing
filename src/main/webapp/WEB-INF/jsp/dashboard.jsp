@@ -33,70 +33,70 @@
                         </div>
                         <div class="media-body">
                             <a class="black" href="#"><h2 class="media-heading">${user.firstname} ${user.lastname}</h2></a>
-                            <p><span class="text-muted">@${user.username}</span><p>
+                            <p><span class="text-muted">@${user.username}</span></p>
                             <div class="row">
                                 <div class="col-xs-6">
                                     <span class="text-muted">Subscriptions</span>
-                            <p><a>50</a></p>
-                        </div>
-                        <div class="col-xs-6">
-                            <span class="text-muted">Topics</span>
-                            <p><a>50</a></p>
+                                    <p><a>50</a></p>
+                                </div>
+                                <div class="col-xs-6">
+                                    <span class="text-muted">Topics</span>
+                                    <p><a>50</a></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <!--Panel for subscriptions-->
-        <div class="row rounded-top">
-            <h5>Subscriptions</h5>
-            <div class="panel-heading-right-text"><a>View All</a></div>
-        </div>
-        <div class="row">
-            <%@include file="subscriptions/not-personal-subscription.jsp"%>
-            <%@include file="subscriptions/personal-subscription.jsp"%>
-        </div>
-        <hr>
-        <%--Subsciption end--%>
+                <!--Panel for subscriptions-->
+                <div class="row rounded-top">
+                    <h5>Subscriptions</h5>
+                    <div class="panel-heading-right-text"><a>View All</a></div>
+                </div>
+                <div class="row">
+                    <%@include file="subscriptions/not-personal-subscription.jsp"%>
+                    <%@include file="subscriptions/personal-subscription.jsp"%>
+                </div>
+                <hr>
+                <%--Subsciption end--%>
 
-        <!--Panel Trending Topics-->
-        <div class="row rounded-top">
-            <h5 class="inline">Trending topics</h5>
-        </div>
-        <div class="row">
-            <c:forEach items="${trendingTopicList}" var="topic">
-                <%  Topic topic=(Topic)pageContext.getAttribute("topic");
-                    User user=(User) request.getAttribute("user");
-                    if(topic.getCreatedBy().getUserid()==user.getUserid()){
-                %>
+                <!--Panel Trending Topics-->
+                <div class="row rounded-top">
+                    <h5 class="inline">Trending topics</h5>
+                </div>
+                <div class="row">
+                    <c:forEach items="${trendingTopicList}" var="topic">
+                        <%  Topic topic=(Topic)pageContext.getAttribute("topic");
+                            User user=(User) request.getAttribute("user");
+                            if(topic.getCreatedBy().getUserid()==user.getUserid()){
+                        %>
                         <%@include file="topics/personal-topic.jsp"%>
-                <%  }else{%>
+                        <%  }else{%>
                         <%@include file="topics/unsubscribed-topic.jsp"%>
-                <%}%>
-            </c:forEach>
+                        <%}%>
+                    </c:forEach>
+                </div>
+                <hr>
+                <%--Trending topics end--%>
+            </div>
         </div>
-        <hr>
-        <%--Trending topics end--%>
-    </div>
-</div>
-<div class="col-md-7">
-    <div class="wrap">
-        <%--<div class="text-center font-weight-bold"><h3>${popupMessage}</h3></div>--%>
-            <!--Inbox panel-->
-            <div class="row rounded-top">
-                <h5>Inbox</h5>
-            </div>
-            <div class="row">
-                <%@include file="inbox/inbox.jsp"%>
-                <%@include file="inbox/inbox.jsp"%>
-            </div>
-            <hr>
-            <%--Inbox end--%>
+        <div class="col-md-7">
+            <div class="wrap">
+                <%--<div class="text-center font-weight-bold"><h3>${popupMessage}</h3></div>--%>
+                <!--Inbox panel-->
+                <div class="row rounded-top">
+                    <h5>Inbox</h5>
+                </div>
+                <div class="row">
+                    <%@include file="inbox/inbox.jsp"%>
+                    <%@include file="inbox/inbox.jsp"%>
+                </div>
+                <hr>
+                <%--Inbox end--%>
 
-    </div><!--wrap-->
-</div> <!--col-md-7-->
-</div><!--row-->
+            </div><!--wrap-->
+        </div> <!--col-md-7-->
+    </div><!--row-->
 </div><!--container-->
 
 <%--

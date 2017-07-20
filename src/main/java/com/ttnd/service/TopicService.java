@@ -26,14 +26,6 @@ public class TopicService {
         this.topicDao = topicDao;
     }
 
-    public TopicDao getTopicDao() {
-        return topicDao;
-    }
-
-    public SubscriptionDao getSubscriptionDao() {
-        return subscriptionDao;
-    }
-
     public void setSubscriptionDao(SubscriptionDao subscriptionDao) {
         this.subscriptionDao = subscriptionDao;
     }
@@ -77,4 +69,13 @@ public class TopicService {
     public List getSubscribers(Topic topic,int pageno,int noofrecords){
         return subscriptionDao.getSubscribers(topic,pageno,noofrecords);
     }
+
+    public List getAllTopicsForUser(User user,int pageno,int records){
+        return topicDao.getAllTopicsForUser(user,pageno,records);
+    }
+
+    public Long getNoOfTopicsForUser(User user){
+        return topicDao.getNoOfTopicsForUser(user);
+    }
 }
+

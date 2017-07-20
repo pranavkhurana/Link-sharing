@@ -29,7 +29,7 @@
         </form>
     </div>
 </div>
-<div style="text-align: center"><h3>${message}</h3></div>
+<div style="text-align: center"><h3>${message}${popupMessage}</h3></div>
 <div class="container">
     <div class="row">
         <div class="col-sm-7">
@@ -199,7 +199,7 @@
                     </form:form>
                 </div>
             </div><!--wrap-->
-        </div> <!--col-sm-4-->
+        </div> <!--col-sm-5-->
 
     </div><!--row-->
 
