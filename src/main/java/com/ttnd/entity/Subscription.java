@@ -62,4 +62,15 @@ public class Subscription {
     public void setDateCreated(Date dateCreated) {
         this.dateCreated = dateCreated;
     }
+
+    @Override
+    public String toString() {
+        return "Subscription{" +
+                "subscriptionid=" + subscriptionid +
+                ", topic=" + topic +
+                ", user=" + user +
+                ", seriousness=" + seriousness +
+                ", dateCreated=" + dateCreated +
+                '}';
+    }
 }

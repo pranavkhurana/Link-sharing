@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="679e94d3-d0ce-4fab-94f0-37d3e35ad2fb" name="Default" comment="" />
+    <list default="true" id="679e94d3-d0ce-4fab-94f0-37d3e35ad2fb" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/ttnd/dao/ResourceDao.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ttnd/dao/ResourceDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/ttnd/dao/ResourceDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ttnd/entity/Subscription.java" afterPath="$PROJECT_DIR$/src/main/java/com/ttnd/entity/Subscription.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/popup.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/popup.js" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -118,120 +123,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="show-topic.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/show-topic.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="637">
-              <caret line="137" column="0" lean-forward="true" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="post-show-to-user.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/post/post-show-to-user.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="28" column="8" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DashboardController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ttnd/controller/DashboardController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ttnd/controller/BaseController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="577">
-              <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShowTopicController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ttnd/controller/ShowTopicController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="47" column="35" lean-forward="true" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="navbar-all-icons.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/includes/navbar-all-icons.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="26" column="26" lean-forward="false" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="subscribe-form.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/includes/subscribe-form.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="linksharing.Resource" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/c8653c3e/3b043a68-111f-4bd3-857d-1a7191f32674/linksharing.Resource">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="linksharing.User" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/c8653c3e/3b043a68-111f-4bd3-857d-1a7191f32674/linksharing.User">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ttnd/dao/UserDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -263,6 +155,7 @@
       <find>topicid</find>
       <find>subscri</find>
       <find>post panel</find>
+      <find>seriousness</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -276,12 +169,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/ttnd/dao/UserDao.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/hello.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/ttnd/service/UserRegisterService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ttnd/entity/User.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/popups/create-topic.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/popup.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/popup/send-invite.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/ttnd/entity/LinkResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ttnd/formatter/TopicFormatter.java" />
@@ -303,30 +193,33 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ttnd/service/SubscriptinService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/css/custom.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/ttnd/service/ResourceService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ttnd/dao/ResourceDao.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/post/post-show-to-non-user.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/popup/create-topic.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/popup/share-link.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/popup/share-document.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/ttnd/controller/CreateTopicController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ttnd/controller/ShareResourceController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ttnd/controller/SubscriptionController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ttnd/service/SubscriptionService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ttnd/dao/TopicDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ttnd/service/TopicService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/ttnd/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/includes/navbar-no-icons.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ttnd/dao/SubscriptionDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ttnd/controller/ShowTopicController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/includes/navbar-all-icons.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/dashboard.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/ttnd/controller/DashboardController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ttnd/controller/BaseController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/post/post-show-to-user.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ttnd/controller/ShowTopicController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/popup.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/includes/subscribe-form.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ttnd/entity/Subscription.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/custom.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ttnd/dao/SubscriptionDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ttnd/service/SubscriptionService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/show-topic.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ttnd/controller/SubscriptionController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ttnd/dao/ResourceDao.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/post/post-show-to-user.jsp" />
       </list>
     </option>
   </component>
@@ -837,6 +730,36 @@
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Linksharing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Linksharing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1025,6 +948,82 @@
               <option name="myItemId" value="ttnd" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ShareResourceService" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Linksharing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Linksharing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ttnd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ResourceService" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Linksharing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Linksharing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ttnd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1096,6 +1095,44 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="entity" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Linksharing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Linksharing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ttnd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Subscription" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1245,6 +1282,10 @@
               <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ResourceDao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1354,6 +1395,10 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ShareResourceController" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1533,6 +1578,40 @@
               <option name="myItemId" value="com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ttnd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Linksharing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Linksharing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -1549,7 +1628,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="SearchEverywhereHistoryKey" value="showtopic&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/WEB-INF/jsp/show-topic.jsp&#10;showtop&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/controller/ShowTopicController.java&#10;dash&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/WEB-INF/jsp/dashboard.jsp&#10;userdao&#9;PSI&#9;JAVA://com.ttnd.dao.UserDao&#10;navbar&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/WEB-INF/jsp/includes/navbar-all-icons.jsp&#10;servlet&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/WEB-INF/spring-servlet.xml&#10;dashboard&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/controller/DashboardController.java&#10;base&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/controller/BaseController.java&#10;dashboar&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/controller/DashboardController.java&#10;show top&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/WEB-INF/jsp/show-topic.jsp&#10;subscriptiondao&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/dao/SubscriptionDao.java&#10;navbarall&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/WEB-INF/jsp/includes/navbar-all-icons.jsp&#10;dasjsp&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/WEB-INF/jsp/dashboard.jsp&#10;dashboard.j&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/controller/DashboardController.java&#10;login&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/controller/LoginController.java&#10;User&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/entity/User.java&#10;index&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/WEB-INF/jsp/index.jsp&#10;subsser&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/service/SubscriptionService.java&#10;create&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/controller/CreateTopicController.java&#10;subs&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/dao/SubscriptionDao.java&#10;topicdao&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/dao/TopicDao.java&#10;subsdao&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/dao/SubscriptionDao.java&#10;share&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/WEB-INF/jsp/popup/share-document.jsp&#10;shareres&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/controller/ShareResourceController.java&#10;createtop&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/controller/CreateTopicController.java&#10;sharedo&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/WEB-INF/jsp/popup/share-document.jsp&#10;sub&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/controller/SubscriptionController.java&#10;show&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/WEB-INF/jsp/show-topic.jsp&#10;subscriptioncon&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/controller/SubscriptionController.java&#10;showto&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/WEB-INF/jsp/show-topic.jsp&#10;inde&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/WEB-INF/jsp/index.jsp&#10;subscrib&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/WEB-INF/jsp/includes/subscribe-form.jsp&#10;showtopi&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/controller/ShowTopicController.java&#10;dashboardcon&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/controller/DashboardController.java&#10;indes&#9;PSI&#9;JAVA://javax.swing.text.JTextComponent.AccessibleJTextComponent.IndexedSegment&#10;dao&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/dao/ResourceDao.java&#10;resdao&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/dao/ResourceDao.java&#10;resourceSer&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/service/ResourceService.java&#10;topicser&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/service/TopicService.java&#10;topic&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/dao/TopicDao.java&#10;resource&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/dao/ResourceDao.java&#10;subdao&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/dao/SubscriptionDao.java&#10;topidao&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/dao/TopicDao.java&#10;createtopic&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/controller/CreateTopicController.java&#10;cus&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/resources/css/custom.css&#10;topicjsp&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/WEB-INF/jsp/topics/unsubscribed-topic.jsp&#10;topic.js&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/WEB-INF/jsp/topics/unsubscribed-topic.jsp&#10;nav&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/WEB-INF/jsp/includes/navbar-all-icons.jsp&#10;custom&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/resources/css/custom.css&#10;resourc&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/service/ResourceService.java" />
+    <property name="SearchEverywhereHistoryKey" value="show&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/WEB-INF/jsp/post/post-show-to-user.jsp&#10;showtopi&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/controller/ShowTopicController.java&#10;base&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/controller/BaseController.java&#10;login&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/controller/LoginController.java&#10;sharere&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/controller/ShareResourceController.java&#10;service&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/service/TopicService.java&#10;subs&#9;PSI&#9;JAVA://com.ttnd.entity.Subscription&#10;subsdao&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/dao/SubscriptionDao.java&#10;subscribe&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/WEB-INF/jsp/includes/subscribe-form.jsp&#10;showtop&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/WEB-INF/jsp/show-topic.jsp&#10;share&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/WEB-INF/jsp/popup/share-link.jsp&#10;controlle&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/controller/ShowTopicController.java&#10;controller&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/controller/SubscriptionController.java&#10;createtop&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/WEB-INF/jsp/popup/create-topic.jsp&#10;sharelink&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/WEB-INF/jsp/popup/share-link.jsp&#10;index&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/WEB-INF/jsp/index.jsp&#10;subscriptionserv&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/service/SubscriptionService.java&#10;showtopic&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/WEB-INF/jsp/show-topic.jsp&#10;dash&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/WEB-INF/jsp/dashboard.jsp&#10;userdao&#9;PSI&#9;JAVA://com.ttnd.dao.UserDao&#10;navbar&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/WEB-INF/jsp/includes/navbar-all-icons.jsp&#10;servlet&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/WEB-INF/spring-servlet.xml&#10;dashboard&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/controller/DashboardController.java&#10;dashboar&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/controller/DashboardController.java&#10;show top&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/WEB-INF/jsp/show-topic.jsp&#10;subscriptiondao&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/dao/SubscriptionDao.java&#10;navbarall&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/WEB-INF/jsp/includes/navbar-all-icons.jsp&#10;dasjsp&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/WEB-INF/jsp/dashboard.jsp&#10;dashboard.j&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/controller/DashboardController.java&#10;User&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/entity/User.java&#10;subsser&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/service/SubscriptionService.java&#10;create&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/controller/CreateTopicController.java&#10;topicdao&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/dao/TopicDao.java&#10;shareres&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/controller/ShareResourceController.java&#10;sharedo&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/WEB-INF/jsp/popup/share-document.jsp&#10;sub&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/controller/SubscriptionController.java&#10;subscriptioncon&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/controller/SubscriptionController.java&#10;showto&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/WEB-INF/jsp/show-topic.jsp&#10;inde&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/WEB-INF/jsp/index.jsp&#10;subscrib&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/webapp/WEB-INF/jsp/includes/subscribe-form.jsp&#10;dashboardcon&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/controller/DashboardController.java&#10;indes&#9;PSI&#9;JAVA://javax.swing.text.JTextComponent.AccessibleJTextComponent.IndexedSegment&#10;dao&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/dao/ResourceDao.java&#10;resdao&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/dao/ResourceDao.java&#10;resourceSer&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/service/ResourceService.java&#10;topicser&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/service/TopicService.java&#10;topic&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/dao/TopicDao.java&#10;resource&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/dao/ResourceDao.java&#10;subdao&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/dao/SubscriptionDao.java&#10;topidao&#9;FILE&#9;file:///home/pranav/workspace/Linksharing/src/main/java/com/ttnd/dao/TopicDao.java" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -2077,16 +2156,15 @@
       <workItem from="1500357972708" duration="37918000" />
       <workItem from="1500434429339" duration="2056000" />
       <workItem from="1500437232858" duration="47288000" />
-      <workItem from="1500517859012" duration="17080000" />
+      <workItem from="1500517859012" duration="28905000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="252576000" />
+    <option name="totallyTimeSpent" value="264401000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="69" y="-4" width="1851" height="1084" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -2096,21 +2174,21 @@
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3102493" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3102493" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498615" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39979124" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.70250523" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16597077" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43110648" sideWeight="0.49806094" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43110648" sideWeight="0.49806094" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.49695292" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32985386" sideWeight="0.49695292" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1501385" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
@@ -2177,43 +2255,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ttnd/service/UserRegisterService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="28" column="18" lean-forward="false" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ttnd/entity/LinkResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ttnd/entity/DocumentResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="22" column="18" lean-forward="false" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-          <folding>
-            <element signature="e#332#333#0" expanded="false" />
-            <element signature="e#363#364#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ttnd/service/ShareResourceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -2279,22 +2320,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ttnd/service/ResourceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="39" column="62" lean-forward="false" selection-start-line="39" selection-start-column="62" selection-end-line="39" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ttnd/dao/ResourceDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="56" column="20" lean-forward="true" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/popups/send-invite.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-403">
@@ -2337,30 +2362,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/popup/create-topic.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="35" column="28" lean-forward="false" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/popup/share-link.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ttnd/controller/ShareResourceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1409">
-          <caret line="101" column="21" lean-forward="false" selection-start-line="101" selection-start-column="21" selection-end-line="101" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/popup/share-document.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="864">
@@ -2377,37 +2378,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ttnd/service/SubscriptionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="22" column="61" lean-forward="false" selection-start-line="22" selection-start-column="61" selection-end-line="22" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ttnd/service/TopicService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="737">
-          <caret line="74" column="39" lean-forward="false" selection-start-line="74" selection-start-column="39" selection-end-line="74" selection-end-column="39" />
-          <folding>
-            <element signature="e#1666#1667#0" expanded="true" />
-            <element signature="e#1730#1731#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ttnd/entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-198">
           <caret line="21" column="6" lean-forward="false" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="43" lean-forward="false" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
           <folding />
         </state>
       </provider>
@@ -2428,14 +2402,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ttnd/dao/SubscriptionDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="774">
-          <caret line="80" column="102" lean-forward="false" selection-start-line="80" selection-start-column="102" selection-end-line="80" selection-end-column="102" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/c8653c3e/3b043a68-111f-4bd3-857d-1a7191f32674/linksharing.Topic">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -2449,24 +2415,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ttnd/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="40" column="29" lean-forward="false" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ttnd/controller/SubscriptionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
@@ -2476,19 +2424,6 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/c8653c3e/3b043a68-111f-4bd3-857d-1a7191f32674/linksharing.ResourceRating">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/c8653c3e/3b043a68-111f-4bd3-857d-1a7191f32674/linksharing.Subscription">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -2535,24 +2470,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ttnd/controller/ShowTopicController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="47" column="35" lean-forward="true" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ttnd/controller/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ttnd/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -2565,22 +2482,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="10" lean-forward="false" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/post/post-show-to-user.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="28" column="8" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/includes/subscribe-form.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2601,10 +2502,181 @@
         </state>
       </provider>
     </entry>
+    <entry file="dbDummy://dbtable:/c8653c3e/3b043a68-111f-4bd3-857d-1a7191f32674/linksharing.Subscription">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/popup/create-topic.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="35" column="28" lean-forward="false" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1926">
+          <caret line="22" column="43" lean-forward="false" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/popup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/popup/share-link.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="26" column="54" lean-forward="true" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ttnd/service/ShareResourceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="28" column="19" lean-forward="false" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/includes/subscribe-form.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="52" lean-forward="false" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ttnd/service/SubscriptionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="35" column="19" lean-forward="false" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ttnd/dao/SubscriptionDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1178">
+          <caret line="100" column="104" lean-forward="false" selection-start-line="100" selection-start-column="104" selection-end-line="100" selection-end-column="104" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/show-topic.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="137" column="0" lean-forward="true" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
+        <state relative-caret-position="62">
+          <caret line="76" column="160" lean-forward="false" selection-start-line="76" selection-start-column="160" selection-end-line="76" selection-end-column="160" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/post/post-show-to-user.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="31" column="77" lean-forward="false" selection-start-line="31" selection-start-column="77" selection-end-line="31" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ttnd/entity/Subscription.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="66" column="18" lean-forward="false" selection-start-line="66" selection-start-column="18" selection-end-line="66" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ttnd/controller/SubscriptionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="30" column="78" lean-forward="false" selection-start-line="30" selection-start-column="78" selection-end-line="30" selection-end-column="78" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ttnd/controller/ShareResourceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="74" column="4" lean-forward="false" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ttnd/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="40" column="29" lean-forward="false" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ttnd/controller/BaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="33" column="32" lean-forward="true" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ttnd/controller/ShowTopicController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="710">
+          <caret line="69" column="42" lean-forward="false" selection-start-line="69" selection-start-column="42" selection-end-line="69" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ttnd/service/ResourceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="39" column="31" lean-forward="false" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ttnd/dao/ResourceDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="58" column="94" lean-forward="false" selection-start-line="58" selection-start-column="94" selection-end-line="58" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ttnd/service/TopicService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="679">
+          <caret line="74" column="39" lean-forward="false" selection-start-line="74" selection-start-column="39" selection-end-line="74" selection-end-column="39" />
           <folding />
         </state>
       </provider>

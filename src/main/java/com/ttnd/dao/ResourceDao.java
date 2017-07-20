@@ -56,7 +56,7 @@ public class ResourceDao {
     public List getPosts(Topic topic,int pageno,int noofrecords){
         Session session=sessionFactory.openSession();
         session.beginTransaction();
-        Query query=session.createQuery("from Resource where topic=?");
+        Query query=session.createQuery("from Resource where topic=? order by dateCreated desc");
         query.setParameter(0,topic);
         query.setFirstResult(noofrecords*(pageno-1));
         query.setMaxResults(noofrecords);
