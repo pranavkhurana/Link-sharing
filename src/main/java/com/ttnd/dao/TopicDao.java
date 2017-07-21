@@ -114,4 +114,12 @@ public class TopicDao {
         session.getTransaction().commit();
     }
 
+    public boolean deleteTopic(Topic topic){
+        Session session=sessionFactory.openSession();
+        session.beginTransaction();
+        session.delete(topic);
+        session.getTransaction().commit();
+        return true;
+    }
+
 }

@@ -10,10 +10,7 @@ import com.ttnd.service.UserRegisterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpSession;
@@ -150,4 +147,21 @@ public class EditProfileController extends ParentController {
         topicService.updateTopic(topic);
         return new ModelAndView(uri,"popupMessage","<p style='color:green'>Updated successfully.</p>");
     }
+    @RequestMapping(value = "/delete-topic",method = RequestMethod.POST)
+    public ModelAndView deleteTopic(@RequestParam int topicid,HttpSession session){
+
+        System.out.println("hello delete controller");
+        System.out.println(topicid);
+        User user=(User)session.getAttribute("user");
+        System.out.println(user);
+        Topic topic=topicService.getTopic(topicid);
+        System.out.println(topic);
+        if(user.getUserid()==topic.getCreatedBy().getUserid()){
+            if(topicService.deleteTopic(topic)){
+                System.out.println("deleted");
+            }
+        }
+        return new ModelAndView("index");
+    }
 }
+

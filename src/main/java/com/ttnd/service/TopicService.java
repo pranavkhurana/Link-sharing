@@ -1,6 +1,7 @@
 package com.ttnd.service;
 
 import com.sun.org.glassfish.gmbal.InheritedAttribute;
+import com.ttnd.dao.ResourceDao;
 import com.ttnd.dao.SubscriptionDao;
 import com.ttnd.dao.TopicDao;
 import com.ttnd.entity.Subscription;
@@ -21,6 +22,9 @@ public class TopicService {
 
     @Autowired
     SubscriptionDao subscriptionDao;
+
+    @Autowired
+    ResourceDao resourceDao;
 
     public void setTopicDao(TopicDao topicDao) {
         this.topicDao = topicDao;
@@ -77,8 +81,15 @@ public class TopicService {
     public Long getNoOfTopicsForUser(User user){
         return topicDao.getNoOfTopicsForUser(user);
     }
+
     public void updateTopic(Topic topic){
         topicDao.updateTopic(topic);
+    }
+
+    public boolean deleteTopic(Topic topic){
+        if(subscriptionDao.deleteAllSubscriptionsOfTopic(topic)&&resourceDao.deleteAllResourcesOfTopic(topic))
+            return topicDao.deleteTopic(topic);
+        else return false;
     }
 }
 

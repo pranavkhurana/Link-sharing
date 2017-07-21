@@ -54,14 +54,10 @@
             <input type="hidden" name="userid" value="${user.userid}"/>
             --%><input type="hidden" name="uri" value="${uri}"/>
         </form:form>
-<script>
-    $('.jsSubmit select').change(function() {
-        $(this).closest('form').submit();
-    });
-</script>
         <a class="fa fa-envelope fa-2x" aria-hidden="true"></a>
         <%--<a class="fa fa-pencil fa-2x" aria-hidden="true"></a>--%>
-        <a href="${baseURL}/delete-topic/${topic.topicid}"class="fa fa-trash fa-2x" aria-hidden="true"></a>
+        <a id="${topic.topicid}" class="fa fa-trash fa-2x js-topic-delete-trash" aria-hidden="true"></a>
     </span>
+    <hr>
 </div>
-<hr>
+

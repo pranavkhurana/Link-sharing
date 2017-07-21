@@ -64,4 +64,13 @@ public class ResourceDao {
         session.getTransaction().commit();
         return list;
     }
+    public boolean deleteAllResourcesOfTopic(Topic topic){
+        Session session=sessionFactory.openSession();
+        session.beginTransaction();
+        Query query=session.createQuery("delete from Resource where topic=?");
+        query.setParameter(0,topic);
+        query.executeUpdate();
+        session.getTransaction().commit();
+        return true;
+    }
 }
