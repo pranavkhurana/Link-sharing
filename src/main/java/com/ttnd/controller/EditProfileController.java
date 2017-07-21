@@ -168,6 +168,9 @@ public class EditProfileController extends ParentController {
         System.out.println("pageno requested:"+pageno);
         ModelAndView model=new ModelAndView("pagination/edit-profile-topic");
 
+        //Subscription command for changing seriousness
+        model.addObject("userSubscription",new Subscription());
+
         //no of records per page
         int noOfRecords=5;
         model.addObject("recordsPerPage",noOfRecords);

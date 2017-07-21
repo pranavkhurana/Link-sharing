@@ -32,7 +32,10 @@ public class HomepageController extends ParentController {
     }
 
     @RequestMapping("/")
-    public ModelAndView home(){
+    public ModelAndView home(HttpSession session){
+
+        User user=(User)session.getAttribute("user");
+        if(user!=null) return new ModelAndView("forward:/dashboard");
 
         ModelAndView model1=new ModelAndView("index");
 

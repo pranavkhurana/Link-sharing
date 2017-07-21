@@ -22,11 +22,13 @@ public class DashboardController extends ParentController {
     @Autowired
     SubscriptionService subscriptionService;
 
-    @RequestMapping(value="/dashboard",method= RequestMethod.POST)
+    @RequestMapping(value="/dashboard")
     public ModelAndView showDashboard(HttpSession session){
 
         User user=(User)session.getAttribute("user");
-        ModelAndView model=new ModelAndView("dashboard");
+        ModelAndView model=new ModelAndView("dashboard","popupMessage","<p style='color:red'>Please login first.</p>");
+
+        if(user==null) return new ModelAndView("forward:/");
 
         //converting photo bytes[] into image
         if(user!=null&& user.getPhoto()!=null){
