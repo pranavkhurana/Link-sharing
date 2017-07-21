@@ -114,4 +114,15 @@ public class UserDao {
         query.executeUpdate();
         session.getTransaction().commit();
     }
+    public String checkEmailPassword(String email){
+        Session session=sessionFactory.openSession();
+        session.beginTransaction();
+        Query query=session.createQuery("select password from User where email=?");
+        query.setParameter(0,email);
+        String pass=(String)query.uniqueResult();
+        session.getTransaction().commit();
+        System.out.println(pass);
+        return pass;
+
+    }
 }

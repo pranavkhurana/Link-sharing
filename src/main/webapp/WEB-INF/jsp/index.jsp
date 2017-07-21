@@ -126,10 +126,10 @@
                             </div>
                         </div>
                         <button type="submit" class="btn btn-default">Login</button>
-                        <a id="forgot-password" class="right" href="#">Forgot password</a>
+                        <a class="right forgot-password" data-toggle="modal" data-target="#forgot-password-box">Forgot password</a>
                     </form:form>
                 </div>
-
+                <%@include file="popup/forgot-password.jsp"%>
                 <hr>
 
                 <div class="row rounded-top">

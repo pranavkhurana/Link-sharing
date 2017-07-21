@@ -1,7 +1,7 @@
 <!--media for subscibed-personal trending topic-->
 <div class="media">
     <div class="media-left">
-        <a class="dp" href="#"><span class="glyphicon glyphicon-user"></span></a>
+        <a class="dp" href="${baseURL}/show-topic/${topic.topicid}"><span class="glyphicon glyphicon-user"></span></a>
     </div>
     <div class="media-body">
         <form action="${baseURL}/edit-profile/edit-topic-name" method="post">
@@ -50,9 +50,7 @@
             </form:select>
             <form:input path="topic.topicid" value="${topic.topicid}" cssStyle="display:none"></form:input>
             <form:input path="user.userid" value="${user.userid}" cssStyle="display:none"></form:input>
-            <%--<input type="hidden" name="topicid" value="${topic.topicid}"/>
-            <input type="hidden" name="userid" value="${user.userid}"/>
-            --%><input type="hidden" name="uri" value="${uri}"/>
+            <input type="hidden" name="uri" value="${uri}"/>
         </form:form>
         <a class="fa fa-envelope fa-2x" aria-hidden="true"></a>
         <%--<a class="fa fa-pencil fa-2x" aria-hidden="true"></a>--%>

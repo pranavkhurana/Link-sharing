@@ -33,7 +33,6 @@
                         <div class="media-left">
                             <a class="dp" href="#"><span class="glyphicon glyphicon-user"></span></a>
                             <%--<a class="dp" href="#"><img src="${baseURL}/resources/images/${user.userid}.jpg"></a>--%>
-
                         </div>
                         <div class="media-body">
                             <a class="black" href="#"><h2 class="media-heading">${user.firstname} ${user.lastname}</h2></a>
@@ -41,11 +40,11 @@
                             <div class="row">
                                 <div class="col-xs-6">
                                     <span class="text-muted">Subscriptions</span>
-                                    <p><a>50</a></p>
+                                    <p><a>${noOfSubscriptions}</a></p>
                                 </div>
                                 <div class="col-xs-6">
                                     <span class="text-muted">Topics</span>
-                                    <p><a>50</a></p>
+                                    <p><a>${noOfTopics}</a></p>
                                 </div>
                             </div>
                         </div>
@@ -58,8 +57,14 @@
                     <div class="panel-heading-right-text"><a>View All</a></div>
                 </div>
                 <div class="row">
-                    <%@include file="subscriptions/not-personal-subscription.jsp"%>
-                    <%@include file="subscriptions/personal-subscription.jsp"%>
+                    <c:forEach items="${subscribedTopicList}" var="topic">
+                        <c:if test="${topic.createdBy.userid==user.userid}">
+                            <%@include file="topics/personal-topic.jsp"%>
+                        </c:if>
+                        <c:if test="${topic.createdBy.userid!=user.userid}">
+                            <%@include file="topics/subscribed-topic.jsp"%>
+                        </c:if>
+                    </c:forEach>
                 </div>
                 <hr>
                 <%--Subsciption end--%>
@@ -70,14 +75,12 @@
                 </div>
                 <div class="row">
                     <c:forEach items="${trendingTopicList}" var="topic">
-                        <%  Topic topic=(Topic)pageContext.getAttribute("topic");
-                            User user=(User) request.getAttribute("user");
-                            if(topic.getCreatedBy().getUserid()==user.getUserid()){
-                        %>
-                        <%@include file="topics/personal-topic.jsp"%>
-                        <%  }else{%>
-                        <%@include file="topics/unsubscribed-topic.jsp"%>
-                        <%}%>
+                        <c:if test="${topic.createdBy.userid==user.userid}">
+                            <%@include file="topics/personal-topic.jsp"%>
+                        </c:if>
+                        <c:if test="${topic.createdBy.userid!=user.userid}">
+                            <%@include file="topics/no-subscription-mention-topic.jsp"%>
+                        </c:if>
                     </c:forEach>
                 </div>
                 <hr>
@@ -103,19 +106,48 @@
     </div><!--row-->
 </div><!--container-->
 
-<%--
-&lt;%&ndash;form for subscibing(submitted through js)&ndash;%&gt;
-<form:form id="subscribeform" action="subscribe" commandName="subscription" method="post" cssStyle="display:none">
-    <form:input id="subsTopicid" path="topic.topicid" value=""/>
-    <form:input id="subsUserid" path="user.userid" value="${user.userid}"/>
-</form:form>
 <script>
-    function submitSubscriptionForm(topicid){
-        $("#subscribeform #subsTopicid").val(topicid);
-        $("#subscribeform").submit();
-    }
+
+    //visibility and subscription seriousness form submit on topic media
+    $('.jsSubmit select').change(function() {
+        $(this).closest('form').submit();
+    });
+
+    //jquery
+    $(document).ready(function(){
+
+        //topic delete on trash click
+        $("html").on("click",".js-topic-delete-trash",function () {
+            if (!confirm('Are you sure you want to delete this topic? All Posts and Subscriptions will be lost!')) {return 0;}
+            var topicid=$(this).attr("id");
+            $.ajax({
+                type:"POST",
+                url:"edit-profile/delete-topic",
+                data:{topicid:topicid},
+                success:function(data){
+                    console.log(data);
+                }
+            });
+            $(this).parent().parent().prev().hide("slow");
+            $(this).parent().parent().hide();
+        });
+
+
+        //topic pagination on edit-profile page
+        $("#topics").on("click",".change",function(){
+            var pageno=$(this).attr("value");
+            $.ajax({
+                type:"POST",
+                url:"edit-profile/paginate-topics",
+                data:{pageno:pageno},
+                success:function(data){
+                    $("#topics").html(data);
+                }
+            });
+        });
+    });
+
 </script>
---%>
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- Latest compiled JavaScript -->

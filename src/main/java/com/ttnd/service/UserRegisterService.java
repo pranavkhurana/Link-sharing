@@ -59,10 +59,18 @@ public class UserRegisterService {
         editedUser.setLastUpdated(new Date());
         return userDao.editUser(editedUser);
     }
+
     public User getUser(int id){
         return userDao.getUser(id);
     }
+
     public void changePassword(int id,String password){
         userDao.changePassword(id,password);
     }
+
+    public String checkEmailPassword(String email){
+        return userDao.checkEmailPassword(email);
+    }
+
+
 }

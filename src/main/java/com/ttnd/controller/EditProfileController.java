@@ -141,11 +141,13 @@ public class EditProfileController extends ParentController {
     }
     @RequestMapping("/edit-topic-visibility")
     public ModelAndView editTopicVisibility(@RequestParam int visibilityInt,@RequestParam String uri,@RequestParam int id){
+
         Topic topic=topicService.getTopic(id);
         if(visibilityInt==0) topic.setVisibility(Topic.Visibility.Public);
         else topic.setVisibility(Topic.Visibility.Private);
         topicService.updateTopic(topic);
         return new ModelAndView(uri,"popupMessage","<p style='color:green'>Updated successfully.</p>");
+
     }
     @RequestMapping(value = "/delete-topic",method = RequestMethod.POST)
     public String deleteTopic(@RequestParam int topicid,HttpSession session){

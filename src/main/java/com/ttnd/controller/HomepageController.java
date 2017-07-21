@@ -5,7 +5,6 @@ import com.ttnd.service.ResourceService;
 import com.ttnd.service.UserRegisterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
@@ -34,6 +33,7 @@ public class HomepageController extends ParentController {
 
     @RequestMapping("/")
     public ModelAndView home(){
+
         ModelAndView model1=new ModelAndView("index");
 
         //for login form
@@ -93,5 +93,47 @@ public class HomepageController extends ParentController {
     public String logout(HttpSession session){
         session.invalidate();
         return ("redirect:/");
+    }
+
+    @RequestMapping("/forgot-password")
+    public ModelAndView forgotPassword(@RequestParam String email){
+
+        ModelAndView model=new ModelAndView("forward:/");
+        String message;
+
+        String pass=userService.checkEmailPassword(email);
+
+        if(pass!=null){
+            message="<p style='color:green'>Reset password link sent to your email</p>";
+            System.out.println("Reset your password here: localhost:8080/forgot-password/eNcRyPtEd"+pass+"");
+        }
+        else message="<p style='color:red'>Email-id is not registered.</p>";
+        model.addObject("popupMessage",message);
+
+        return model;
+    }
+
+    @RequestMapping("/forgot-password/{encpass}")
+    public ModelAndView resetPasswd(@PathVariable String encpass){
+        ModelAndView model=new ModelAndView("forgot-password-form");
+        model.addObject("encpass",encpass);
+        return model;
+    }
+
+    @RequestMapping("/change-passwd")
+    public ModelAndView changePasswd(@RequestParam String encpass,@RequestParam String email,@RequestParam String password,@RequestParam String confirm){
+
+        String message;
+        String originalPass=userService.checkEmailPassword(email);
+        String encOriginalPass="eNcRyPtEd"+originalPass+"";
+
+        if(confirm!=password)
+            message="Passwords do not match!";
+        else if(encpass==encOriginalPass) {
+
+            message = "Password reset successfully. Login with new password to proceed.";
+        }else message="Invalid attempt";
+
+        return new ModelAndView("forward:/dashboard","popupMessage",message);
     }
 }

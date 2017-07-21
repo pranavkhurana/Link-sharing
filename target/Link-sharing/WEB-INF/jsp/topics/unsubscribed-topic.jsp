@@ -1,10 +1,10 @@
 <!--Media for unsubscribed trending topic-->
 <div class="media">
     <div class="media-left">
-        <a class="dp" href="#"><span class="glyphicon glyphicon-user"></span></a>
+        <a class="dp" href="${baseURL}/show-topic/${topic.topicid}"><span class="glyphicon glyphicon-user"></span></a>
     </div>
     <div class="media-body">
-        <a class="" href="#"><h3 class="media-heading">${topic.name}</h3></a>
+        <a class="" href="${baseURL}/show-topic/${topic.topicid}"><h3 class="media-heading">${topic.name}</h3></a>
         <div class="row margin-top-15">
             <div class="col-xs-5">
                 <span class="text-muted">@${topic.createdBy.username}</span>
