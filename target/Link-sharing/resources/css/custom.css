@@ -166,3 +166,10 @@ a:focus,a{
 .rounded-all .media{
     background-color: #95cece1a;
 }
+#username-navbar{
+    color: #1f7a7a;
+    background-color: transparent;
+    border-color: transparent;
+    margin-top: 22px;
+    padding: 0px;
+}

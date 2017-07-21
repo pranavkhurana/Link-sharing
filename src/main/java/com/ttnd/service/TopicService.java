@@ -77,5 +77,8 @@ public class TopicService {
     public Long getNoOfTopicsForUser(User user){
         return topicDao.getNoOfTopicsForUser(user);
     }
+    public void updateTopic(Topic topic){
+        topicDao.updateTopic(topic);
+    }
 }
 

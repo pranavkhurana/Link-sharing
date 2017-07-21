@@ -2,7 +2,15 @@
 <div class="container-fluid">
     <div class="header">
         <h2><a>Link Sharing</a></h2>
-        <a href="#" style="margin-top:21px">${user.username}</a>
+        <%--<a href="#" style="margin-top:21px">${user.username}</a>--%>
+        <div class="dropdown">
+            <button id="username-navbar" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">${user.username}
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="${baseURL}/edit-profile">Edit profile</a></li>
+                <li><a href="${baseURL}/logout">Logout</a></li>
+            </ul>
+        </div>
         <a style="margin-left:7px" class="fa fa-user"></a>
         <!-- <a href="#"><span class="fa-stack"><i class="fa fa-file-o fa-stack-2x"></i><i class="fa fa-plus fa-stack-1x"></i></span></a> -->
         <a class="fa fa-envelope-o  send-invite" data-toggle="modal" data-target="#send-invite-box"></a>

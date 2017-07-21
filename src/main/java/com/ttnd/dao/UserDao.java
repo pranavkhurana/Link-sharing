@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
+import java.util.Date;
 import java.util.List;
 
 @Repository
@@ -76,5 +77,41 @@ public class UserDao {
             return 3;
         }
         return 0;
+    }
+
+    public boolean editUser(User user){
+        Session session=sessionFactory.openSession();
+        session.beginTransaction();
+        System.out.println(user);
+        Query query=session.createQuery("update User set firstname=?,lastname=?,username=?,photo=?,lastUpdated=? where userid=?");
+        query.setParameter(0,user.getFirstname());
+        query.setParameter(1,user.getLastname());
+        query.setParameter(2,user.getUsername());
+        query.setParameter(3,user.getPhoto());
+        query.setParameter(4,user.getLastUpdated());
+        query.setParameter(5,user.getUserid());
+        query.executeUpdate();
+
+        session.getTransaction().commit();
+        return true;
+    }
+
+    public User getUser(int id){
+        Session session=sessionFactory.openSession();
+        session.beginTransaction();
+        User user=(User)session.get(User.class,id);
+        session.getTransaction().commit();
+        System.out.println("in dao :"+user);
+        return user;
+    }
+    public void changePassword(int id,String password){
+        Session session=sessionFactory.openSession();
+        session.beginTransaction();
+        Query query=session.createQuery("update User set password=?,lastUpdated=? where userid=?");
+        query.setParameter(0,password);
+        query.setParameter(1,new Date());
+        query.setParameter(2,id);
+        query.executeUpdate();
+        session.getTransaction().commit();
     }
 }

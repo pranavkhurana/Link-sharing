@@ -106,4 +106,12 @@ public class TopicDao {
         session.getTransaction().commit();
         return noOfTopics;
     }
+
+    public void updateTopic(Topic topic){
+        Session session=sessionFactory.openSession();
+        session.beginTransaction();
+        session.update(topic);
+        session.getTransaction().commit();
+    }
+
 }

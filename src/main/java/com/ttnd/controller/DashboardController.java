@@ -53,8 +53,8 @@ public class DashboardController extends ParentController {
         //model.addObject("subscription",new Subscription());
 
         //subscribed topics
-//        List subscribedTopicList=topicService.getSubscribedTopics(user);
-//        model.addObject("subscribedTopicList",subscribedTopicList);
+        //List subscribedTopicList=topicService.getSubscribedTopics(user);
+        //model.addObject("subscribedTopicList",subscribedTopicList);
 
         //trending topics
         List trendingTopicList=topicService.getTrendingTopics();

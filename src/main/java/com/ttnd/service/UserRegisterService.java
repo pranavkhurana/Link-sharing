@@ -1,5 +1,6 @@
 package com.ttnd.service;
 
+import com.ttnd.command.ProfileEditCommand;
 import com.ttnd.dao.UserDao;
 import com.ttnd.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +14,6 @@ public class UserRegisterService {
 
     @Autowired
     UserDao userDao;
-
 
     public UserRegisterService() {
     }
@@ -48,5 +48,21 @@ public class UserRegisterService {
             return "Email already exists.";
         else return "Username already exists.";
 
+    }
+    public boolean editUser(ProfileEditCommand profileEditCommand){
+        User editedUser=new User();
+        editedUser.setFirstname(profileEditCommand.getFirstname());
+        editedUser.setLastname(profileEditCommand.getLastname());
+        editedUser.setPhoto(profileEditCommand.getPhoto());
+        editedUser.setUsername(profileEditCommand.getUsername());
+        editedUser.setUserid(profileEditCommand.getId());
+        editedUser.setLastUpdated(new Date());
+        return userDao.editUser(editedUser);
+    }
+    public User getUser(int id){
+        return userDao.getUser(id);
+    }
+    public void changePassword(int id,String password){
+        userDao.changePassword(id,password);
     }
 }
