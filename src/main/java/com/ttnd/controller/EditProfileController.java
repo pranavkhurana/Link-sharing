@@ -63,7 +63,7 @@ public class EditProfileController extends ParentController {
         model.addObject("profileEditCommand",profileEditCommand);
 
         //all topics of this user
-        List allTopicsForUser=topicService.getAllTopicsForUser(user,1,10);
+        List allTopicsForUser=topicService.getAllTopicsForUser(user,1,5);
         model.addObject("allTopicsForUser",allTopicsForUser);
 
         //no of topics
@@ -148,20 +148,51 @@ public class EditProfileController extends ParentController {
         return new ModelAndView(uri,"popupMessage","<p style='color:green'>Updated successfully.</p>");
     }
     @RequestMapping(value = "/delete-topic",method = RequestMethod.POST)
-    public ModelAndView deleteTopic(@RequestParam int topicid,HttpSession session){
+    public String deleteTopic(@RequestParam int topicid,HttpSession session){
 
-        System.out.println("hello delete controller");
-        System.out.println(topicid);
         User user=(User)session.getAttribute("user");
-        System.out.println(user);
         Topic topic=topicService.getTopic(topicid);
-        System.out.println(topic);
         if(user.getUserid()==topic.getCreatedBy().getUserid()){
             if(topicService.deleteTopic(topic)){
-                System.out.println("deleted");
+                return "success";
             }
         }
-        return new ModelAndView("index");
+        return "failed";
+    }
+
+    @RequestMapping(value="/paginate-topics",method=RequestMethod.POST)
+    public ModelAndView fetchTopics(@RequestParam int pageno,HttpSession session){
+
+        System.out.println("pageno requested:"+pageno);
+        ModelAndView model=new ModelAndView("pagination/edit-profile-topic");
+
+        //no of records per page
+        int noOfRecords=5;
+        model.addObject("recordsPerPage",noOfRecords);
+
+        //user
+        User user=(User)session.getAttribute("user");
+        model.addObject("user",user);
+
+        //no of topics
+        Long noOfTopics=topicService.getNoOfTopicsForUser(user);
+        model.addObject("noOfTopics",noOfTopics);
+
+        //check if pageno exeeded
+        if(pageno==-1 || pageno > ((noOfTopics/noOfRecords)+1))
+            pageno=1;
+        model.addObject("pageNo",pageno);
+
+        //all topics of this user
+        List allTopicsForUser=topicService.getAllTopicsForUser(user, pageno,noOfRecords);
+        model.addObject("allTopicsForUser",allTopicsForUser);
+
+        //no of Subscriptions
+        Long noOfSubscriptions=subscriptionService.getNoOfSubscriptions(user);
+        model.addObject("noOfSubscriptions",noOfSubscriptions);
+
+        System.out.println("List served"+allTopicsForUser);
+        return model;
     }
 }
 
