@@ -150,5 +150,4 @@ public class EditProfileController extends ParentController {
         topicService.updateTopic(topic);
         return new ModelAndView(uri,"popupMessage","<p style='color:green'>Updated successfully.</p>");
     }
-
 }

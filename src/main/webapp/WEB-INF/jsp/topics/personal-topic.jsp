@@ -29,27 +29,39 @@
 </div>
 <div class="after-media clearfix">
     <span>
-        <form id="visibilityUpdateForm" action="${baseURL}/edit-profile/edit-topic-visibility" style="display:inline" method="post">
-            <select name="visibilityInt" value="${topic.visibility}" onchange="$('#visibilityUpdateForm').submit()">
-            <%--<select name="visibilityInt" value="${topic.visibility}" onchange="submitVisibilityUpdateForm()">--%>
+        <form class="jsSubmit" action="${baseURL}/edit-profile/edit-topic-visibility" style="display:inline" method="post">
+            <%--<select name="visibilityInt" value="${topic.visibility}" onchange="$('#visibilityUpdateForm').submit()">--%>
+
+            <select name="visibilityInt" value="${topic.visibility}" >
                 <option selected="selected" disabled="disabled">${topic.visibility}</option>
                 <option value="0">Public</option>
                 <option value="1">Private</option>
             </select>
+
             <input type="hidden" value="${topic.topicid}" name="id"/>
             <input type="hidden" value="${uri}" name="uri"/>
+
         </form>
-        <form:form id="subscriptionUpdateForm" commandName="userSubscription" action="${baseURL}/changeSeriousness" cssStyle="display:inline" method="post">
-            <form:input path="subscriptionid" id="subscriptionid" value="" cssStyle="display:none"></form:input>
-            <form:select path="seriousness" id="seriousness" itemValue="seriousness" onchange="submitSubscriptionUpdateForm(${userSubscription.subscriptionid})">
+
+        <form:form cssClass="jsSubmit" commandName="userSubscription" action="${baseURL}/change-seriousness-with-topic-id" cssStyle="display:inline" method="post">
+            <form:select path="seriousness" itemValue="seriousness">
+                <form:option value="">Seriousness</form:option>
                 <form:options/>
             </form:select>
-            <input type="hidden" name="uri" value="${uri}"/>
+            <form:input path="topic.topicid" value="${topic.topicid}" cssStyle="display:none"></form:input>
+            <form:input path="user.userid" value="${user.userid}" cssStyle="display:none"></form:input>
+            <%--<input type="hidden" name="topicid" value="${topic.topicid}"/>
+            <input type="hidden" name="userid" value="${user.userid}"/>
+            --%><input type="hidden" name="uri" value="${uri}"/>
         </form:form>
-
+<script>
+    $('.jsSubmit select').change(function() {
+        $(this).closest('form').submit();
+    });
+</script>
         <a class="fa fa-envelope fa-2x" aria-hidden="true"></a>
         <%--<a class="fa fa-pencil fa-2x" aria-hidden="true"></a>--%>
-        <a class="fa fa-trash fa-2x" aria-hidden="true"></a>
+        <a href="${baseURL}/delete-topic/${topic.topicid}"class="fa fa-trash fa-2x" aria-hidden="true"></a>
     </span>
 </div>
 <hr>
